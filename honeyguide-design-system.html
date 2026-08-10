@@ -1,0 +1,1684 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HoneyGuide Design System</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="hg-ds">
+      <div class="hg-shell">
+        <nav class="hg-sidebar" id="sidebar">
+          <div class="hg-brand">
+            <img
+              src="./assets/musa/static/favicon32x32.png"
+              alt="Musa app icon"
+            />
+            <div>
+              <div class="name">HoneyGuide</div>
+              <div class="sub">Design System</div>
+            </div>
+          </div>
+          <div id="navlist"></div>
+        </nav>
+
+        <div class="hg-topbar" id="topbar"></div>
+
+        <main class="hg-main">
+          <div class="hg-content">
+            <div class="hg-hero">
+              <img
+                src="./assets/musa/static/favicon32x32.png"
+                alt="Musa The honeyguide"
+              />
+              <div>
+                <div class="hg-eyebrow">HoneyGuide Design System</div>
+                <h1>
+                  The voice, world &amp; interface behind Musa the Honeyguide.
+                </h1>
+                <p>
+                  A working reference for how HoneyGuide looks, sounds, moves
+                  and talks.
+                </p>
+              </div>
+            </div>
+
+            <section
+              class="hg-section"
+              id="principles"
+              style="border-top: none; padding-top: 0; margin-top: 0"
+            >
+              <div class="hg-eyebrow">00 - Principles</div>
+              <h2>Six rules everything else is built to serve</h2>
+              <p class="hg-lead">
+                This system is already visually complete. From here, new work
+                should formalize these ideas - tokens, states, specs - rather
+                than add more colour, more decoration, or more variants. When a
+                new pattern doesn't fit one of these six, that's the system
+                telling you something.
+              </p>
+              <div class="hg-grid cols-3">
+                <div class="hg-value-card">
+                  <div class="k">01 · Guide, don't gatekeep</div>
+                  <div class="v">
+                    Learning stays open and supportive - no walls where a nudge
+                    would do.
+                  </div>
+                </div>
+                <div class="hg-value-card">
+                  <div class="k">02 · Progress feels tangible</div>
+                  <div class="v">
+                    XP, path nodes and badges make growth visible, not just
+                    counted somewhere.
+                  </div>
+                </div>
+                <div class="hg-value-card">
+                  <div class="k">03 · Identity feels natural</div>
+                  <div class="v">
+                    South African culture lives in Musa's details - it doesn't
+                    get painted across the UI.
+                  </div>
+                </div>
+                <div class="hg-value-card">
+                  <div class="k">04 · Softness over punishment</div>
+                  <div class="v">
+                    A wrong answer is feedback, not a failure state.
+                  </div>
+                </div>
+                <div class="hg-value-card">
+                  <div class="k">05 · Character over decoration</div>
+                  <div class="v">
+                    Musa communicates on purpose. He's never just sitting in a
+                    corner.
+                  </div>
+                </div>
+                <div class="hg-value-card">
+                  <div class="k">06 · Delight never blocks</div>
+                  <div class="v">
+                    Motion, sound and rewards add warmth - nothing ever waits on
+                    them.
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section class="hg-section" id="brand">
+              <div class="hg-eyebrow">01 - Brand</div>
+              <h2>Never a teacher. Always a guide.</h2>
+              <p class="hg-lead">
+                HoneyGuide teaches South African history, geography, science,
+                languages and civics - the way a good guide does: pointing
+                things out, not testing you on them.
+              </p>
+
+              <div class="hg-quote">
+                <div class="mission">
+                  "Musa is your learning companion who guides you through South
+                  Africa's history, geography, science, languages and civics."
+                </div>
+                <div class="tagline">Never a teacher. Always a guide. ❤</div>
+              </div>
+
+              <div class="hg-h3">Voice - four pillars</div>
+              <div class="hg-grid cols-2">
+                <div class="hg-value-card">
+                  <div class="k">Guide, not teacher</div>
+                  <div class="v">
+                    We point things out and let the learner arrive at it. No red
+                    pen, no grading tone.
+                  </div>
+                  <div class="hg-saydont say">
+                    <b>Say</b>"You've got this - try again."
+                  </div>
+                  <div class="hg-saydont no"><b>Not this</b>"Incorrect."</div>
+                </div>
+                <div class="hg-value-card">
+                  <div class="k">Warm, not childish</div>
+                  <div class="v">
+                    Plain, encouraging language for a general audience - not
+                    baby talk, not exclamation-mark stacking.
+                  </div>
+                  <div class="hg-saydont say">
+                    <b>Say</b>"Nice - that's the second time this week."
+                  </div>
+                  <div class="hg-saydont no">
+                    <b>Not this</b>"WOW!! Super duper job!!! 🎉🎉🎉"
+                  </div>
+                </div>
+                <div class="hg-value-card">
+                  <div class="k">Proudly South African, not kitsch</div>
+                  <div class="v">
+                    Real references, used in context - not flag emoji decoration
+                    or stock "rainbow nation" language.
+                  </div>
+                  <div class="hg-saydont say">
+                    <b>Say</b>"This is the mountain Capetonians call Table
+                    Mountain."
+                  </div>
+                  <div class="hg-saydont no">
+                    <b>Not this</b>"🇿🇦 Welcome to the Rainbow Nation! 🌈"
+                  </div>
+                </div>
+                <div class="hg-value-card">
+                  <div class="k">Grounded, not trivia-hollow</div>
+                  <div class="v">
+                    Every fact earns a "why this matters" - the lesson format is
+                    built around that pairing, not a quiz gate.
+                  </div>
+                  <div class="hg-saydont say">
+                    <b>Say</b>a key fact, then why it still matters today.
+                  </div>
+                  <div class="hg-saydont no">
+                    <b>Not this</b>a date and a name with no context.
+                  </div>
+                </div>
+              </div>
+
+              <div class="hg-h3">Values</div>
+              <div class="hg-grid cols-2">
+                <div class="hg-value-card">
+                  <div class="k">Learning over testing</div>
+                  <div class="v">
+                    No placement assessment gate. Lessons open with a key fact
+                    and close with why it matters - not a quiz you have to pass
+                    to proceed.
+                  </div>
+                </div>
+                <div class="hg-value-card">
+                  <div class="k">A guide, not a gatekeeper</div>
+                  <div class="v">
+                    One full track - History of South Africa - is free to
+                    explore before anyone creates an account.
+                  </div>
+                </div>
+                <div class="hg-value-card">
+                  <div class="k">Built on real content</div>
+                  <div class="v">
+                    Grounded in a recovered archive of 8 tracks, ~169 lessons
+                    and 845 quiz questions - not placeholder copy.
+                  </div>
+                </div>
+                <div class="hg-value-card">
+                  <div class="k">Pride, used sparingly</div>
+                  <div class="v">
+                    The flag's colours live in Musa's scarf. They're a detail,
+                    not the UI's load-bearing palette.
+                  </div>
+                </div>
+              </div>
+
+              <div class="hg-h3">Naming</div>
+              <div class="hg-grid cols-2">
+                <div class="hg-card">
+                  <div
+                    class="k"
+                    style="
+                      font-family: var(--font-display);
+                      font-weight: 700;
+                      color: var(--green-deep);
+                      margin-bottom: 6px;
+                    "
+                  >
+                    HoneyGuide
+                  </div>
+                  <div
+                    style="
+                      font-size: 13.5px;
+                      line-height: 1.6;
+                      color: var(--ink-soft);
+                    "
+                  >
+                    Named for the greater honeyguide bird - known across
+                    Southern Africa for leading people to wild beehives. It
+                    shows the way; it doesn't do the work for you. That's the
+                    whole product thesis in one animal.
+                  </div>
+                </div>
+                <div class="hg-card">
+                  <div
+                    class="k"
+                    style="
+                      font-family: var(--font-display);
+                      font-weight: 700;
+                      color: var(--green-deep);
+                      margin-bottom: 6px;
+                    "
+                  >
+                    Musa
+                  </div>
+                  <div
+                    style="
+                      font-size: 13.5px;
+                      line-height: 1.6;
+                      color: var(--ink-soft);
+                    "
+                  >
+                    The mascot's name and its story haven't been formally
+                    written up yet. Placeholder - worth a short paragraph here
+                    once that's settled (meaning, pronunciation, why this name
+                    for this bird).
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section class="hg-section" id="colors">
+              <div class="hg-eyebrow">02 - Colors</div>
+              <h2>Colors</h2>
+              <p class="hg-lead">
+                The full token set already used in production. Everything else
+                in this document is built from these values - nothing here is
+                aspirational.
+              </p>
+
+              <div class="hg-h3">Primary - Jade Green</div>
+              <div class="hg-grid cols-4">
+                <div class="hg-swatch">
+                  <div class="chip" style="background: var(--green-lt)"></div>
+                  <div class="info">
+                    <div class="n">Jade Light</div>
+                    <div class="h">#3FC79A</div>
+                  </div>
+                </div>
+                <div class="hg-swatch">
+                  <div class="chip" style="background: var(--green)"></div>
+                  <div class="info">
+                    <div class="n">Jade Green</div>
+                    <div class="h">#0FA676</div>
+                    <div class="u">Primary brand color</div>
+                  </div>
+                </div>
+                <div class="hg-swatch">
+                  <div class="chip" style="background: var(--green-dk)"></div>
+                  <div class="info">
+                    <div class="n">Jade Dark</div>
+                    <div class="h">#0C8560</div>
+                  </div>
+                </div>
+                <div class="hg-swatch">
+                  <div class="chip" style="background: var(--green-deep)"></div>
+                  <div class="info">
+                    <div class="n">Deep Green</div>
+                    <div class="h">#21543D</div>
+                    <div class="u">Headings, ink</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="hg-h3">Secondary - Golden Yellow</div>
+              <div class="hg-grid cols-3">
+                <div class="hg-swatch">
+                  <div class="chip" style="background: var(--gold-lt)"></div>
+                  <div class="info">
+                    <div class="n">Gold Light</div>
+                    <div class="h">#FFD97D</div>
+                  </div>
+                </div>
+                <div class="hg-swatch">
+                  <div class="chip" style="background: var(--gold)"></div>
+                  <div class="info">
+                    <div class="n">Golden Yellow</div>
+                    <div class="h">#FFC24D</div>
+                    <div class="u">Rewards, streaks, CTAs</div>
+                  </div>
+                </div>
+                <div class="hg-swatch">
+                  <div class="chip" style="background: var(--gold-dk)"></div>
+                  <div class="info">
+                    <div class="n">Gold Dark</div>
+                    <div class="h">#E0A020</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="hg-h3">Neutral - Warm Brown</div>
+              <div class="hg-grid cols-3">
+                <div class="hg-swatch">
+                  <div class="chip" style="background: var(--brown-lt)"></div>
+                  <div class="info">
+                    <div class="n">Brown Light</div>
+                    <div class="h">#AD8058</div>
+                  </div>
+                </div>
+                <div class="hg-swatch">
+                  <div class="chip" style="background: var(--brown)"></div>
+                  <div class="info">
+                    <div class="n">Warm Brown</div>
+                    <div class="h">#8B5E34</div>
+                    <div class="u">Musa's wings, satchel</div>
+                  </div>
+                </div>
+                <div class="hg-swatch">
+                  <div class="chip" style="background: var(--brown-dk)"></div>
+                  <div class="info">
+                    <div class="n">Brown Dark</div>
+                    <div class="h">#6E4826</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="hg-h3">Flag accents</div>
+              <div class="flag-note" style="margin-bottom: 14px">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 2l9 4.5V12c0 5.5-3.8 9.7-9 11-5.2-1.3-9-5.5-9-11V6.5z"
+                    fill="currentColor"
+                  />
+                </svg>
+                Use sparingly - Musa's scarf and small accent moments only.
+                Never as functional UI color (buttons, states, charts).
+              </div>
+              <div class="hg-grid cols-3">
+                <div class="hg-swatch">
+                  <div class="chip" style="background: var(--flag-red)"></div>
+                  <div class="info">
+                    <div class="n">Red</div>
+                    <div class="h">#DF1F3D</div>
+                  </div>
+                </div>
+                <div class="hg-swatch">
+                  <div class="chip" style="background: var(--flag-blue)"></div>
+                  <div class="info">
+                    <div class="n">Blue</div>
+                    <div class="h">#1E3A8A</div>
+                  </div>
+                </div>
+                <div class="hg-swatch">
+                  <div class="chip" style="background: var(--flag-black)"></div>
+                  <div class="info">
+                    <div class="n">Black</div>
+                    <div class="h">#111111</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="hg-h3">Supplementary - functional colors</div>
+              <div class="hg-grid cols-3">
+                <div class="hg-swatch">
+                  <div class="chip" style="background: var(--coral)"></div>
+                  <div class="info">
+                    <div class="n">Coral</div>
+                    <div class="h">#FF6B57</div>
+                    <div class="u">
+                      Hearts, errors - never used for Musa's own tone
+                    </div>
+                  </div>
+                </div>
+                <div class="hg-swatch">
+                  <div class="chip" style="background: var(--sky)"></div>
+                  <div class="info">
+                    <div class="n">Sky</div>
+                    <div class="h">#3FA9E0</div>
+                    <div class="u">Info, focus rings</div>
+                  </div>
+                </div>
+                <div class="hg-swatch">
+                  <div class="chip" style="background: var(--violet)"></div>
+                  <div class="info">
+                    <div class="n">Violet</div>
+                    <div class="h">#8B6FD9</div>
+                    <div class="u">Streaks, rare rewards</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="hg-h3">Backgrounds</div>
+              <div class="hg-grid cols-4">
+                <div class="hg-swatch">
+                  <div class="chip" style="background: var(--bg)"></div>
+                  <div class="info">
+                    <div class="n">Background</div>
+                    <div class="h">#F6EFDD</div>
+                  </div>
+                </div>
+                <div class="hg-swatch">
+                  <div class="chip" style="background: var(--bg-2)"></div>
+                  <div class="info">
+                    <div class="n">Background 2</div>
+                    <div class="h">#EFE2C4</div>
+                  </div>
+                </div>
+                <div class="hg-swatch">
+                  <div
+                    class="chip"
+                    style="background: var(--card); border: 1px solid #eee"
+                  ></div>
+                  <div class="info">
+                    <div class="n">Card</div>
+                    <div class="h">#FFFFFF</div>
+                  </div>
+                </div>
+                <div class="hg-swatch">
+                  <div class="chip" style="background: var(--card-warm)"></div>
+                  <div class="info">
+                    <div class="n">Card Warm</div>
+                    <div class="h">#FFF9EC</div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section class="hg-section" id="typography">
+              <div class="hg-eyebrow">03 - Typography</div>
+              <h2>Typography</h2>
+              <p class="hg-lead">
+                Fredoka carries the brand's personality - headings, buttons,
+                anything that should feel spoken by Musa. Manrope handles
+                everything you actually read.
+              </p>
+
+              <div class="hg-grid cols-2">
+                <div class="hg-card">
+                  <div
+                    style="
+                      font-family: var(--font-display);
+                      font-size: 30px;
+                      font-weight: 700;
+                      color: var(--green-deep);
+                    "
+                  >
+                    Fredoka
+                  </div>
+                  <div
+                    style="
+                      font-size: 12.5px;
+                      color: var(--ink-faint);
+                      margin-top: 4px;
+                    "
+                  >
+                    Display - headings, buttons, stat numbers
+                  </div>
+                </div>
+                <div class="hg-card">
+                  <div
+                    style="
+                      font-family: var(--font-body);
+                      font-size: 24px;
+                      font-weight: 800;
+                      color: var(--green-deep);
+                    "
+                  >
+                    Manrope
+                  </div>
+                  <div
+                    style="
+                      font-size: 12.5px;
+                      color: var(--ink-faint);
+                      margin-top: 4px;
+                    "
+                  >
+                    Body - paragraphs, labels, lesson content
+                  </div>
+                </div>
+              </div>
+
+              <div class="hg-h3">Type scale</div>
+              <div class="hg-card">
+                <div class="hg-type-row">
+                  <span class="sample" style="font-size: 34px; font-weight: 700"
+                    >Display XL</span
+                  ><span class="meta">Fredoka 700 · 34px / 1.1</span>
+                </div>
+                <div class="hg-type-row">
+                  <span class="sample" style="font-size: 26px; font-weight: 600"
+                    >Display Large</span
+                  ><span class="meta">Fredoka 600 · 26px / 1.15</span>
+                </div>
+                <div class="hg-type-row">
+                  <span class="sample" style="font-size: 20px; font-weight: 600"
+                    >Display Medium</span
+                  ><span class="meta">Fredoka 600 · 20px / 1.2</span>
+                </div>
+                <div class="hg-type-row">
+                  <span class="sample" style="font-size: 15px; font-weight: 600"
+                    >Display Small</span
+                  ><span class="meta">Fredoka 600 · 15px / 1.3</span>
+                </div>
+                <div class="hg-type-row">
+                  <span
+                    class="sample hg-body-sample"
+                    style="
+                      font-size: 16px;
+                      font-weight: 500;
+                      font-family: var(--font-body);
+                      color: var(--ink);
+                    "
+                    >Body Large - for lesson key facts and anything the learner
+                    needs to actually read.</span
+                  ><span class="meta">Manrope 500 · 16px / 1.6</span>
+                </div>
+                <div class="hg-type-row">
+                  <span
+                    class="sample hg-body-sample"
+                    style="
+                      font-size: 14px;
+                      font-family: var(--font-body);
+                      color: var(--ink);
+                    "
+                    >Body Medium - supporting text, descriptions, card
+                    copy.</span
+                  ><span class="meta">Manrope 400 · 14px / 1.6</span>
+                </div>
+                <div class="hg-type-row">
+                  <span
+                    class="sample"
+                    style="
+                      font-size: 11px;
+                      font-weight: 700;
+                      text-transform: uppercase;
+                      letter-spacing: 0.08em;
+                      font-family: var(--font-display);
+                      color: var(--green-dk);
+                    "
+                    >Eyebrow Label</span
+                  ><span class="meta">Fredoka 700 · 11px · uppercase</span>
+                </div>
+              </div>
+            </section>
+
+            <section class="hg-section" id="icons">
+              <div class="hg-eyebrow">04 - Icons</div>
+              <h2>Icons</h2>
+              <p class="hg-lead">
+                24×24, currentColor, drawn to sit comfortably next to Fredoka.
+                Filled shapes for badges and rewards, 2–2.4px stroke for
+                functional UI icons - don't mix both styles within a single
+                icon.
+              </p>
+              <div class="hg-grid cols-4" id="icon-grid"></div>
+            </section>
+            <section class="hg-section" id="musa">
+              <div class="hg-eyebrow">05 - Musa</div>
+              <h2>The Honeyguide</h2>
+              <p class="hg-lead">
+                A young greater honeyguide in an explorer's scarf and satchel.
+                Curious, encouraging, proud of the learner rather than of
+                himself - and never, in any of his fifteen expressions, angry or
+                mocking.
+              </p>
+
+              <div class="hg-frame">
+                <img
+                  src="./assets/musa/static/musa.png"
+                  alt="Musa the Honeyguide character sheet"
+                />
+              </div>
+
+              <div class="hg-h3">Expressions (15)</div>
+              <p class="hg-lead" style="margin-bottom: 16px">
+                Every expression maps to a real product moment. None of them are
+                negative toward the learner - the closest Musa gets to "wrong
+                answer" is Encouraging or Confused, played gently.
+              </p>
+              <div class="hg-frame">
+                <img
+                  src="./assets/musa/static/expressions.png"
+                  alt="Musa's 15 expressions"
+                />
+              </div>
+              <div class="hg-card-warm" style="margin-top: 14px">
+                <div class="hg-grid cols-2" style="gap: 8px">
+                  <div
+                    style="
+                      font-size: 12.5px;
+                      line-height: 1.7;
+                      color: var(--ink-soft);
+                    "
+                  >
+                    <b style="color: var(--green-deep)">Happy</b> - lesson
+                    complete &nbsp;·&nbsp;
+                    <b style="color: var(--green-deep)">Celebrating</b> - streak
+                    milestone &nbsp;·&nbsp;
+                    <b style="color: var(--green-deep)">Excited</b> - new track
+                    unlocked &nbsp;·&nbsp;
+                    <b style="color: var(--green-deep)">Curious</b> - track
+                    intro &nbsp;·&nbsp;
+                    <b style="color: var(--green-deep)">Thinking</b> - content
+                    loading
+                  </div>
+                  <div
+                    style="
+                      font-size: 12.5px;
+                      line-height: 1.7;
+                      color: var(--ink-soft);
+                    "
+                  >
+                    <b style="color: var(--green-deep)">Encouraging</b> - wrong
+                    answer &nbsp;·&nbsp;
+                    <b style="color: var(--green-deep)">Confused</b> - used
+                    sparingly, paired with a hint &nbsp;·&nbsp;
+                    <b style="color: var(--green-deep)">Sleepy</b> -
+                    re-engagement nudge &nbsp;·&nbsp;
+                    <b style="color: var(--green-deep)">Determined</b> -
+                    mid-streak &nbsp;·&nbsp;
+                    <b style="color: var(--green-deep)">Proud</b> - hard lesson
+                    cleared
+                  </div>
+                </div>
+              </div>
+
+              <div class="hg-h3">Poses</div>
+              <div class="hg-frame">
+                <img src="./assets/musa/static/poses.png" alt="Musa poses" />
+              </div>
+
+              <div class="hg-h3">Unlockable accessories</div>
+              <p class="hg-lead" style="margin-bottom: 16px">
+                Accessories tie directly into the badge system - they're earned,
+                not cosmetic filler.
+              </p>
+              <div class="hg-frame">
+                <img
+                  src="./assets/musa/static/unlockable-accessories-1.png"
+                  alt="Musa unlockable accessories"
+                />
+              </div>
+              <div class="hg-frame">
+                <img
+                  src="./assets/musa/static/unlockable-accessories-2.png"
+                  alt="Musa dressed in unlockable accessories"
+                />
+              </div>
+
+              <div class="hg-h3">Turnaround</div>
+              <div class="hg-frame">
+                <img
+                  src="./assets/musa/static/turnaround.png"
+                  alt="Musa turnaround sheet"
+                />
+                <div class="cap">
+                  Reference for any future 3D, AR, or animated use.
+                </div>
+              </div>
+
+              <div class="hg-h3">Do's &amp; don'ts</div>
+              <div class="hg-grid cols-2">
+                <div class="hg-saydont say" style="margin: 0">
+                  <b>Do</b>
+                  Keep the scarf on in every context. Let Musa's expression
+                  carry the emotional weight instead of adding !! or CAPS for
+                  emphasis. Use Musa to soften hard moments - a wrong answer, an
+                  empty state, a lost streak.
+                </div>
+                <div class="hg-saydont no" style="margin: 0">
+                  <b>Don't</b>
+                  Invent a new expression without adding it here first. Use Musa
+                  in account, payment, or legal contexts - those need a plainer,
+                  non-mascot tone. Recolour the scarf outside the brand palette,
+                  or crop/stretch him off-model.
+                </div>
+              </div>
+
+              <div class="hg-h3">Animation</div>
+              <p class="hg-lead" style="margin-bottom: 14px">
+                Musa's idle state is a slow float - the same keyframe used
+                across the app for anything that should feel alive without
+                demanding attention. See the
+                <a
+                  href="#motion"
+                  style="color: var(--green-dk); font-weight: 700"
+                  >Motion</a
+                >
+                section for the full set and live demos.
+              </p>
+              <div class="demo-card" style="align-items: center">
+                <div class="motion-stage" style="width: 100%">
+                  <div class="mv anim-float">
+                    <svg viewBox="0 0 24 24">
+                      <path
+                        d="M12 3c3 0 5 2 5 5 0 1-.3 2-.8 2.7L20 14l-3.3-.4c-.4 2-1.7 3.6-3.5 4.4L14 21h-1l-.5-2.8c-3.6.2-6.5-2.5-6.5-6.2C6 8 8.5 3 12 3z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                <div class="lbl">Idle float - 3.6s ease-in-out, infinite</div>
+              </div>
+            </section>
+
+            <section class="hg-section" id="illustration">
+              <div class="hg-eyebrow">06 - Illustration</div>
+              <h2>Illustration</h2>
+              <p class="hg-lead">
+                Illustration extends the South African motif through iconography
+                - protea, mountains, coastline - rather than literal flag
+                imagery. The sticker set mirrors Musa's 15 expressions for
+                shareable, in-app moments.
+              </p>
+
+              <div class="hg-h3">Sticker pack</div>
+              <div class="hg-frame">
+                <img
+                  src="./assets/musa/static/sticker-pack.png"
+                  alt="Musa sticker pack examples"
+                />
+              </div>
+
+              <div class="hg-grid cols-2" style="margin-top: 16px">
+                <div class="hg-frame">
+                  <img src="./assets/musa/static/badges.png" alt="Badges" />
+                  <!-- <div class="cap">
+                    SA-inspired detail icons - protea pin, mountain patch,
+                    coastline patch
+                  </div> -->
+                </div>
+                <div class="hg-frame">
+                  <img
+                    src="./assets/musa/static/scarf-details.png"
+                    alt="South African inspired scarf trim"
+                  />
+                  <div class="cap">
+                    Scarf: Ndebele-inspired geometric trim, SA colours used as a
+                    detail - not a backdrop
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section class="hg-section" id="components">
+              <div class="hg-eyebrow">07 - Components</div>
+              <h2>Components</h2>
+              <p class="hg-lead">
+                Live specimens, not screenshots - this is the actual clay-shadow
+                system running in the app today.
+              </p>
+
+              <div class="hg-h3">Spacing scale</div>
+              <div class="demo-card">
+                <div class="lbl">4px base unit</div>
+                <div class="spacing-row">
+                  <div class="spacing-item">
+                    <div class="bar" style="height: 4px"></div>
+                    <div class="lb">4</div>
+                  </div>
+                  <div class="spacing-item">
+                    <div class="bar" style="height: 8px"></div>
+                    <div class="lb">8</div>
+                  </div>
+                  <div class="spacing-item">
+                    <div class="bar" style="height: 12px"></div>
+                    <div class="lb">12</div>
+                  </div>
+                  <div class="spacing-item">
+                    <div class="bar" style="height: 16px"></div>
+                    <div class="lb">16</div>
+                  </div>
+                  <div class="spacing-item">
+                    <div class="bar" style="height: 20px"></div>
+                    <div class="lb">20</div>
+                  </div>
+                  <div class="spacing-item">
+                    <div class="bar" style="height: 24px"></div>
+                    <div class="lb">24</div>
+                  </div>
+                  <div class="spacing-item">
+                    <div class="bar" style="height: 32px"></div>
+                    <div class="lb">32</div>
+                  </div>
+                  <div class="spacing-item">
+                    <div class="bar" style="height: 40px"></div>
+                    <div class="lb">40</div>
+                  </div>
+                  <div class="spacing-item">
+                    <div class="bar" style="height: 48px"></div>
+                    <div class="lb">48</div>
+                  </div>
+                  <div class="spacing-item">
+                    <div class="bar" style="height: 64px"></div>
+                    <div class="lb">64</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="hg-h3">Buttons</div>
+              <div class="demo-card">
+                <div class="lbl">
+                  Variants - primary / gold / coral / ghost / outline
+                </div>
+                <div class="demo-row">
+                  <button class="clay-btn">Start lesson</button>
+                  <button class="clay-btn gold">Claim reward</button>
+                  <button class="clay-btn coral">Leave lesson</button>
+                  <button class="clay-btn ghost">Skip</button>
+                  <button class="clay-btn outline">Maybe later</button>
+                </div>
+              </div>
+              <div class="demo-card" style="margin-top: 12px">
+                <div class="lbl">
+                  States - default / hover &amp; focus (try it) / pressed /
+                  loading / disabled
+                </div>
+                <div class="demo-row">
+                  <button class="clay-btn">Default</button>
+                  <button class="clay-btn">Hover me</button>
+                  <button
+                    class="clay-btn"
+                    style="
+                      transform: translateY(4px);
+                      box-shadow:
+                        inset 0 2px 0 rgba(255, 255, 255, 0.3),
+                        0 2px 0 var(--green-dk);
+                    "
+                  >
+                    Pressed
+                  </button>
+                  <button class="clay-btn loading">
+                    Saving <span class="spin"></span>
+                  </button>
+                  <button class="clay-btn" disabled>Locked</button>
+                </div>
+              </div>
+
+              <div class="hg-h3">Cards &amp; chips</div>
+              <div class="hg-grid cols-2">
+                <div class="demo-card">
+                  <div class="lbl">Clay card</div>
+                  <div class="hg-card" style="width: 100%">
+                    <div
+                      style="
+                        font-family: var(--font-display);
+                        font-weight: 700;
+                        font-size: 14px;
+                        color: var(--green-deep);
+                      "
+                    >
+                      History of South Africa
+                    </div>
+                    <div
+                      style="
+                        font-size: 12.5px;
+                        color: var(--ink-soft);
+                        margin-top: 4px;
+                      "
+                    >
+                      18 lessons · Free track
+                    </div>
+                  </div>
+                </div>
+                <div class="demo-card">
+                  <div class="lbl">Chips</div>
+                  <div class="demo-row">
+                    <span class="hg-chip">Beginner</span
+                    ><span class="hg-chip gold">Featured</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="hg-h3">Stats &amp; progress</div>
+              <div class="hg-grid cols-2">
+                <div class="demo-card">
+                  <div class="lbl">Stat pills</div>
+                  <div class="demo-row">
+                    <span class="stat-pill flame"
+                      ><svg viewBox="0 0 24 24">
+                        <path
+                          d="M12 2c1 3-3 4-3 8a3 3 0 0 0 6 0c1.5 1 2 3 2 4.5A5.5 5.5 0 0 1 6 14.5C6 9 12 7 12 2z"
+                          fill="currentColor"
+                        /></svg
+                      >12</span
+                    >
+                    <span class="stat-pill"
+                      ><svg viewBox="0 0 24 24" style="color: var(--coral)">
+                        <path
+                          d="M12 20s-7-4.4-9.5-8.8C1 8 2.2 4.5 5.6 4c2-.3 3.6.7 4.7 2.2C11.4 7.7 12 8 12 8s.6-.3 1.7-1.8C14.8 4.7 16.4 3.7 18.4 4c3.4.5 4.6 4 3.1 7.2C19 15.6 12 20 12 20z"
+                          fill="currentColor"
+                        /></svg
+                      >5</span
+                    >
+                    <span class="stat-pill"
+                      ><svg viewBox="0 0 24 24" style="color: var(--sky)">
+                        <path
+                          d="M4 9l4-6h8l4 6-10 12z"
+                          fill="currentColor"
+                        /></svg
+                      >340</span
+                    >
+                  </div>
+                </div>
+                <div class="demo-card">
+                  <div class="lbl">Progress</div>
+                  <div class="hg-progress" style="margin-top: 4px">
+                    <div class="fill" style="width: 64%"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="hg-h3">Path node - states</div>
+              <div class="demo-card">
+                <div class="lbl">
+                  Locked / current (active) / default / complete
+                </div>
+                <div class="demo-row" style="gap: 22px; padding-top: 6px">
+                  <div class="demo-node locked">
+                    <svg viewBox="0 0 24 24">
+                      <rect
+                        x="5"
+                        y="11"
+                        width="14"
+                        height="9"
+                        rx="2"
+                        fill="currentColor"
+                      />
+                      <path
+                        d="M8 11V8a4 4 0 0 1 8 0v3"
+                        stroke="currentColor"
+                        stroke-width="2.2"
+                        fill="none"
+                      />
+                    </svg>
+                  </div>
+                  <div class="demo-node active">
+                    <svg viewBox="0 0 24 24">
+                      <path
+                        d="M4 5.5C4 4.7 4.7 4 5.5 4H12v16H5.5A1.5 1.5 0 0 1 4 18.5z"
+                        fill="currentColor"
+                      />
+                      <path
+                        d="M20 5.5c0-.8-.7-1.5-1.5-1.5H12v16h6.5a1.5 1.5 0 0 0 1.5-1.5z"
+                        fill="currentColor"
+                        opacity=".65"
+                      />
+                    </svg>
+                  </div>
+                  <div class="demo-node">
+                    <svg viewBox="0 0 24 24">
+                      <path
+                        d="M4 5.5C4 4.7 4.7 4 5.5 4H12v16H5.5A1.5 1.5 0 0 1 4 18.5z"
+                        fill="currentColor"
+                      />
+                      <path
+                        d="M20 5.5c0-.8-.7-1.5-1.5-1.5H12v16h6.5a1.5 1.5 0 0 0 1.5-1.5z"
+                        fill="currentColor"
+                        opacity=".65"
+                      />
+                    </svg>
+                  </div>
+                  <div class="demo-node complete">
+                    <svg viewBox="0 0 24 24">
+                      <path
+                        d="M5 13l4.5 4.5L19 7"
+                        stroke="currentColor"
+                        stroke-width="3"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+
+              <div class="hg-h3">Badges</div>
+              <div class="demo-card">
+                <div class="lbl">Badge tiles</div>
+                <div class="demo-row">
+                  <div class="hg-badge-tile">
+                    <div class="badge-ic">
+                      <svg viewBox="0 0 24 24">
+                        <path
+                          d="M12 2.5l2.9 6.4 6.9.7-5.2 4.7 1.5 6.9L12 17.6l-6.1 3.6 1.5-6.9L2.2 9.6l6.9-.7z"
+                          fill="currentColor"
+                        />
+                      </svg>
+                    </div>
+                    <div class="b-label">Explorer</div>
+                  </div>
+                  <div class="hg-badge-tile">
+                    <div class="badge-ic">
+                      <svg viewBox="0 0 24 24">
+                        <path
+                          d="M7 4h10v4a5 5 0 0 1-10 0z"
+                          fill="currentColor"
+                        />
+                        <rect
+                          x="10"
+                          y="14"
+                          width="4"
+                          height="4"
+                          fill="currentColor"
+                        />
+                        <rect
+                          x="7"
+                          y="18"
+                          width="10"
+                          height="2.5"
+                          rx="1"
+                          fill="currentColor"
+                        />
+                      </svg>
+                    </div>
+                    <div class="b-label">Champion</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="hg-h3">Leaderboard row</div>
+              <div class="demo-card" style="gap: 8px">
+                <div class="lb-row me" style="width: 100%">
+                  <span class="lb-rank">2</span><span class="lb-avatar"></span
+                  ><span class="lb-name">You</span
+                  ><span class="lb-xp">1,240 XP</span>
+                </div>
+                <div class="lb-row" style="width: 100%">
+                  <span class="lb-rank">3</span><span class="lb-avatar"></span
+                  ><span class="lb-name">Junior</span
+                  ><span class="lb-xp">1,180 XP</span>
+                </div>
+              </div>
+            </section>
+
+            <section class="hg-section" id="motion">
+              <div class="hg-eyebrow">08 - Motion</div>
+              <h2>Motion</h2>
+              <p class="hg-lead">
+                Motion celebrates - it never blocks. Nothing in this list makes
+                the learner wait longer than the interaction actually needs. Tap
+                a button to replay it.
+              </p>
+
+              <div class="hg-grid cols-3">
+                <div class="demo-card" style="align-items: center">
+                  <div class="motion-stage">
+                    <div class="mv" id="stage-float">
+                      <svg viewBox="0 0 24 24">
+                        <path
+                          d="M12 3c3 0 5 2 5 5 0 1-.3 2-.8 2.7L20 14l-3.3-.4c-.4 2-1.7 3.6-3.5 4.4L14 21h-1l-.5-2.8c-3.6.2-6.5-2.5-6.5-6.2C6 8 8.5 3 12 3z"
+                          fill="currentColor"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <button
+                    class="clay-btn outline"
+                    data-replay="stage-float"
+                    data-anim="anim-float"
+                    style="width: 100%"
+                  >
+                    float
+                  </button>
+                </div>
+                <div class="demo-card" style="align-items: center">
+                  <div class="motion-stage">
+                    <div class="mv" id="stage-bounce">
+                      <svg viewBox="0 0 24 24">
+                        <path
+                          d="M4 5.5C4 4.7 4.7 4 5.5 4H12v16H5.5A1.5 1.5 0 0 1 4 18.5z"
+                          fill="currentColor"
+                        />
+                        <path
+                          d="M20 5.5c0-.8-.7-1.5-1.5-1.5H12v16h6.5a1.5 1.5 0 0 0 1.5-1.5z"
+                          fill="currentColor"
+                          opacity=".65"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <button
+                    class="clay-btn outline"
+                    data-replay="stage-bounce"
+                    data-anim="anim-bounce"
+                    style="width: 100%"
+                  >
+                    nodeBounce
+                  </button>
+                </div>
+                <div class="demo-card" style="align-items: center">
+                  <div class="motion-stage">
+                    <div class="mv" id="stage-burst">
+                      <svg viewBox="0 0 24 24">
+                        <path
+                          d="M7 4h10v4a5 5 0 0 1-10 0z"
+                          fill="currentColor"
+                        />
+                        <rect
+                          x="10"
+                          y="14"
+                          width="4"
+                          height="4"
+                          fill="currentColor"
+                        />
+                        <rect
+                          x="7"
+                          y="18"
+                          width="10"
+                          height="2.5"
+                          rx="1"
+                          fill="currentColor"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <button
+                    class="clay-btn outline"
+                    data-replay="stage-burst"
+                    data-anim="anim-burst"
+                    style="width: 100%"
+                  >
+                    trophyBurst
+                  </button>
+                </div>
+              </div>
+
+              <div class="hg-h3">Ambient - idle, no user action</div>
+              <table class="hg-mtable">
+                <thead>
+                  <tr>
+                    <th>Keyframe</th>
+                    <th>Timing</th>
+                    <th>Used for</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="k">float</td>
+                    <td><code>3.6s infinite</code></td>
+                    <td>
+                      Musa's idle state, anywhere he's just present on screen
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="k">nodeBounce</td>
+                    <td><code>2.2s infinite</code></td>
+                    <td>Drawing the eye to the next lesson node on the path</td>
+                  </tr>
+                  <tr>
+                    <td class="k">bossPulse</td>
+                    <td><code>1.8s infinite</code></td>
+                    <td>Milestone / boss-level nodes, idle</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <div class="hg-h3">Feedback - responds to a user action</div>
+              <table class="hg-mtable">
+                <tbody>
+                  <tr>
+                    <td class="k">countBump</td>
+                    <td><code>.4s</code></td>
+                    <td>XP / streak counters incrementing</td>
+                  </tr>
+                  <tr>
+                    <td class="k">pulseGlow</td>
+                    <td><code>.9s</code></td>
+                    <td>Drawing attention to a newly-claimable reward</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <div class="hg-h3">Celebration - a genuine win</div>
+              <table class="hg-mtable">
+                <tbody>
+                  <tr>
+                    <td class="k">confettiFall</td>
+                    <td><code>variable</code></td>
+                    <td>Track completion, big milestones</td>
+                  </tr>
+                  <tr>
+                    <td class="k">trophyBurst</td>
+                    <td><code>.7s</code></td>
+                    <td>Badge or achievement reveal</td>
+                  </tr>
+                  <tr>
+                    <td class="k">starPop</td>
+                    <td><code>.4s</code></td>
+                    <td>Perfect-lesson star rating</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <div class="hg-h3">Transition - moving between screens</div>
+              <table class="hg-mtable">
+                <tbody>
+                  <tr>
+                    <td class="k">screenIn</td>
+                    <td><code>.32s ease-out</code></td>
+                    <td>Full-screen transitions between lessons</td>
+                  </tr>
+                  <tr>
+                    <td class="k">sheetUp / sheetPop</td>
+                    <td><code>.3s ease-out</code></td>
+                    <td>Bottom sheets - answer feedback, track details</td>
+                  </tr>
+                </tbody>
+              </table>
+              <p class="hg-lead" style="margin-top: 16px; font-size: 13px">
+                Four buckets, deliberately: <b>ambient</b> plays without being
+                asked, <b>feedback</b> replies to what the learner just did,
+                <b>celebration</b> is earned, and <b>transition</b> gets out of
+                the way as fast as it can. If a new animation doesn't obviously
+                belong to one, that's usually a sign it's decorative rather than
+                functional.
+              </p>
+            </section>
+
+            <section class="hg-section" id="rewards">
+              <div class="hg-eyebrow">09 - Rewards</div>
+              <h2>Rewards</h2>
+              <p class="hg-lead">
+                XP, hearts and the leaderboard are MVP, not a later add-on -
+                they're part of how HoneyGuide keeps a guide feeling like a
+                guide instead of a nag.
+              </p>
+
+              <div class="hg-grid cols-3">
+                <div class="hg-card">
+                  <div style="display: flex; align-items: center; gap: 8px">
+                    <svg
+                      viewBox="0 0 24 24"
+                      width="22"
+                      height="22"
+                      style="color: var(--sky)"
+                    >
+                      <path
+                        d="M4 9l4-6h8l4 6-10 12z"
+                        fill="currentColor"
+                      /></svg
+                    ><span
+                      style="font-family: var(--font-display); font-weight: 700"
+                      >XP</span
+                    >
+                  </div>
+                  <div
+                    style="
+                      font-size: 12.5px;
+                      color: var(--ink-soft);
+                      margin-top: 6px;
+                    "
+                  >
+                    Earned per lesson. Drives the leaderboard.
+                  </div>
+                </div>
+                <div class="hg-card">
+                  <div style="display: flex; align-items: center; gap: 8px">
+                    <svg
+                      viewBox="0 0 24 24"
+                      width="22"
+                      height="22"
+                      style="color: var(--coral)"
+                    >
+                      <path
+                        d="M12 20s-7-4.4-9.5-8.8C1 8 2.2 4.5 5.6 4c2-.3 3.6.7 4.7 2.2C11.4 7.7 12 8 12 8s.6-.3 1.7-1.8C14.8 4.7 16.4 3.7 18.4 4c3.4.5 4.6 4 3.1 7.2C19 15.6 12 20 12 20z"
+                        fill="currentColor"
+                      /></svg
+                    ><span
+                      style="font-family: var(--font-display); font-weight: 700"
+                      >Hearts</span
+                    >
+                  </div>
+                  <div
+                    style="
+                      font-size: 12.5px;
+                      color: var(--ink-soft);
+                      margin-top: 6px;
+                    "
+                  >
+                    A soft limit on wrong answers - never a hard stop that feels
+                    punishing.
+                  </div>
+                </div>
+                <div class="hg-card">
+                  <div style="display: flex; align-items: center; gap: 8px">
+                    <svg
+                      viewBox="0 0 24 24"
+                      width="22"
+                      height="22"
+                      style="color: var(--gold-dk)"
+                    >
+                      <path
+                        d="M12 2c1 3-3 4-3 8a3 3 0 0 0 6 0c1.5 1 2 3 2 4.5A5.5 5.5 0 0 1 6 14.5C6 9 12 7 12 2z"
+                        fill="currentColor"
+                      /></svg
+                    ><span
+                      style="font-family: var(--font-display); font-weight: 700"
+                      >Streak</span
+                    >
+                  </div>
+                  <div
+                    style="
+                      font-size: 12.5px;
+                      color: var(--ink-soft);
+                      margin-top: 6px;
+                    "
+                  >
+                    Consecutive days learning. Losing one is a Sleepy Musa, not
+                    a scolding.
+                  </div>
+                </div>
+              </div>
+
+              <div class="hg-h3">Badge evolution ladder</div>
+              <p class="hg-lead" style="margin-bottom: 14px">
+                Musa grows with the learner - his scarf and badges evolve at set
+                milestones. This is a real, literal sequence, so it's the one
+                place in this document a numbered ladder actually belongs.
+              </p>
+              <div class="hg-frame">
+                <img
+                  src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCAAoBEwDASIAAhEBAxEB/8QAHQAAAQQDAQEAAAAAAAAAAAAAAAECBgcDBAUICf/EAEMQAAIBAwMCBAUBBwMDAgMJAAECAwQFEQAGEhMhBzFRkRQiQVOSYQgVMjNDcYEjQlIWcsEkYoKh0zU2ZXWElcPR0v/EABoBAAIDAQEAAAAAAAAAAAAAAAABAgMEBQb/xAAtEQACAgIBAwMDBAIDAQAAAAAAAQIRAxIhBDFRE0FhBXGBIpGx8KHRIzJCwf/aAAwDAQACEQMRAD8A9kaxJ/qKHbPfuBnyGsuscH8lP7arZIUIvofc6Xgp+h/I6d5ahe5fEza1gvrWetnqmni4idoYC6QkjOGOfPBBIAONVZc2PDHbJJJfJfg6bN1MtcUXJ/BMemnofyOjpp6H3OoPV+K2zqe+i1GtmccxG1UkOYFY/wDuz5d/MAgeupzkEEjRjz4strHJOu9Dz9LnwKLyxcb7WJwX0PudHTX0PudVHv277utfipPXbcp626RUtjgiktiZMcj1EsypNjyykiR8iO4jZ/TUfsW+77s7ac9qudxW4VtNTXBqarr1dpayqiuDxFR37jiQQo8gR9NXamP1FZfgjX0PudHTXPkfc6qCr8TLtR1e5aOprLastJWJBSNT0ZnhhR6holMsvWUBsL8wkEfFskclxnrQ7+u9R4P2vdfw1HS1lZPHT1MzRu1PRKZzE9Qyg5KKByxkDuMtjJ0aj9RFldNf19zpOmnofc6pe2+Jm8LjHXz26C0XGK3UdyqyKWklJrvh6kxRJF8/y8wAxPzH/iD20N4nbpgpJJKJLPuOAVEVHFX0FNMkElTUwkwRkFmwEmCo5ycLKueJB0ai9RF0dJfQ/kdHSX6g+51SdZ4sbljtdvvE9LbrdRTVz0ssUtO71LNCkaz9OIyKZB12lQcSW4opCvk4lnihvTcu2bnS0tnskFyFfAxpQwccZIW5zhyOwHQ5FfLLLjvnGjUPURYBiT0P5HS9NfQ+51RV93vuGupxfKSqisEM0NurUqpopXVLfLcpI1MkZcKpMQR3IAOGKkgAEdvw4vm4qbcr0NXPBWWq5Xu8pDmKTrQ9GUurcyxUowyAoAAHHBPfRqHqc0WyY09D7nR009D7nVX7h8QNzW25X22w2qlmlsyPVTSmGQx/CyFBTP8AKc9uUpfHfFO+AMjGhUeK1bbKepetqrPU0kUVwSlukcMkcFfPDDDJEsY5HuTJKhUFuRjPE9iAah6iRb/TT0P5HR019G9zrjbTvsV8slPViWBqoQxfFxxZ/wBGZokkKEHuCA4OD9CNVTvKzC2TeINRbJbnFLR2mlmos19SyRyzGXqEKXx3wvb6Y7Y0UhudKy7zGv6/kdHBf19zqodz+IW7rJXVVpaKzPNS1VQhuE8Zgp5eEUEscZDSYVm6zAkMxxGSFJyBJPEbcm5LVFQiyx2+KWS11twqPiIXnANPHG4iXiy/xFiOR+gyBnRqG5Oumh+h/I6XpJ6H3Oqik8Qtx0lT+7brWWK2g1CF7tPSyimhR6RZ1iKF+7liyBiwyFPblgax1HiNvL9xVl5a20FJFE9vpzDJTvypmqYYpHmkZ3UcE5kAHj/EORGDp6hui4Oknofc6Okn6/kdQKHed4i8MaPd9XBb5Fgl6ly+FYyp8GsjJJNHxJHIJiQjLD5WAJ7HXDh3/un98UtNXQ2yjqJJKIR2toJDU1cdS/d425YHRQjl2Iyj8uIK6WobpFs9NPQ/kdHSTHkfc6r7w331WbmutHQT/BlxZY6utEKsDDVGYxvEcn5cAfwnuPrqHbI37uSmksVlWGleEpFyatlxNWCSolWTplnDExhcYVXyRg8QQdGobl5dJfQ+50dNPQ/kdUtZfErdl3rVt9vNqd6uto0p6qSjbEMU4n5B4klY806K9mZWBbDAdtd3bu/Lwtypp9xzWqC1VT3OLmsDxGn+EnCK7uzEHmD3GBg4xnvo1Dcszpp+v5HR0k9D+R1VPjVc75SXKoo6S9R0dFU7WujJTGNg01SgTjwcMCHAJIwCQobsc5GjujxB3htuaSzzizyTw1GGubwmGmC/DLMsTCSUAMWJXlz7qpIHLto1DcuQxp+v5HR009D+R1q2WpnrbRRVdTFHDNPTxyyRxyc1RmUEgN25AE9j9dbmlVE7G9NPQ/kdJ0o/Q+50/wCml+migGdJB9D+R0nTT0P5HT9LooBnST0P5HR009D+R04aNFAN6Seh9zrWuVZRW6nE1VJwDMERRlmdj5Kqjux/Qa3NV7ve60lLHJdK7dVLtoipNLSVU8SSlUTvLwV+3JiDlsHiijy89VZZ6LjuyUVfc6dPS3KvqpKu5IxUieJIKgRlRFJjiQF7qwCgEMTnuc6dbK6ts8ssN7lqZ6FEiWOsbiyqQuHZ+PzICceYI7ZJ766izLJGrxurKwBVlIIIPkRj11GNsXikuO5rrT0+86G8IGYx0KRRrJSFW4uquv8AMQdgcglW8z3xrkQyTU3KLs2SkmtZLgncYidQ6HkrDIIbII9dO6aeh/I64O3+NFdKm0RnEIjWop0HlGrEh0HoobBA+nLHkNSDyGuviyLJHYyTjo6G9JPQ/kdHTT0P5HXLnvtPDuqj2+YZTNV0c1WsgI4KsTxqVP1yTIMf2OtGDfuzZxM0W5Lc4hjkkkxL5JGOTt+qgd8jsQDjONXUV7LySHpx+h/I6XpJ6H8jqL/9fbdnudJbrXWw3Gonr1opVhkGYSVlPM5/iXMTLkZ+YEeYOt+2biWt3VdLAbdWU72+ngnE8vDp1CymQApgk4BjIyQP00ahsjs9JPQ/kdHTT0P5HTvpo0uBjemnofyOjpp6H8jp+k0UA3ppjyP5HR009D7nTvpo0AN6SZ8j+R0dJPQ/kdOxo0AM6Seh/I6XpJ+v5HTtGigG9NPQ+50vBB9D7nS6Ccf30cAYKuSlpYHqKmVIo0GWd5OIH+TqJrVXm4I1fEGimAj+HjDukQ7/AOokqsAfI/xYOQAVwdLWVFfX10dzo6SmqkSpMMAqKgxpDEpKvMoCsWkYghfLAA7jJz3O7HuSRrldX1Dk6gzXigo90Ydu3ZLlCyVCdCrVn5QHkjhAxCvxbuARg/X++u0I09Dj/uOovTQVtfRkXekhoKyGQmCWlqeqE9HRiqkehUjB7juDruWKuautscsqKs6lo5lXyEiMVbH6ZGR+h1q6XNv+ifdFWWK/7R7G3009D+R0dNPQ/kdOJ/TXFh3JQm63uiqf/Sx2eGGaoqJnVY+EiM+c/QAKc51qKW6Ox0kP0P5HR0kH0P5HXCpN67Tqadp4b/QmNTGrcpOJUu5RQwOCCWVh3H076wWnfNjvO4KK1Weda5KqnqJjURthYzEYvlZSAcsJlYHyI79wRqWotl5JLwT0P5HScEP0P5HUCqPEnNVUW6i2xdp7sl0e3Q0UkkUTTcKcTtLyLFVTgRjJySVGBntLdrXuj3Ht2332gEopa6nSeISrxdQwzhh9CPI/20qEpJ9mdDpJ9QfyOjpp6H8jp40aKRIb048+R/I6TpJjyP5HT9GkAzpp6H8jo6aeh/I6fjRpgMESeh/I6OknofyOn6NFAN6Seh/I6OknofyOnaBooBvTT0b8jqPXy5zGv/ddvHLAUzvFKeoo5fMinBAbiM4JBIPbuNb9/qJcQUEEjxPUluciHDJGoy5B+hOQoP05Z+mudYvjUoTFVUFLQBXIihppzKoT6FiVX5j9fP8AudYerz6rSPcvww/9MxUN4moLgtBe2RIG6nRqpGYclDAJzbHAMwJ7ZB+XJ88ak3CM/Q/kdcKpauNwigFFTzW+SNhPK0+HVvoOmVwyn6/Nnv5HS2KYUF0azFz8O8PXowTngoIDx/2UlSPQNjyGodL1ErUJkssE+Ynd6aeh/I6XpJ6H8jp2fQaj1PvC0m2XO5V0n7vprdcJaCR5iPmdHCDiBknkSAB5nPlropWZW6O90kz5H8jpeknofyOuAd87PFGav/qK3GAEjmJgQSI1kOMefyOh/wDiA8zjWG0byoLzVXWKzwSXBKCkhqEeF1/9QZOp/pqGxxYGIqQ2ME4OMHRqGy8kk6aeh/I6OnH/AMT+R1XB8V6eOro6CqszUdbLWz0c61FwhSGJ4ujyAlyVc/6yjA78lZTgjVlHzOjUFK+wzpR+h/I6XpJ6H8jp2j/OihjOknofyOjpp6H8jrJpNFAN6Seh/I6OmnofyOnkaB6aKAZ009D+R02RYI42llcJGoyzM+AB6k6y41Etzvcq6oq0t0dDK1CUWGOtdlgecgMWfiCSEUrgAfxE+WARXlyLFG2ShHZ0I9xrriss9MsyGJHFL0nZVEgPy8+QAdWGPmGRjOt/b96+PlmpLhGtNWpKwSMh06qDHzoG7kefcfQZ7ZxrLB13ij65QycRz4EleWO+M98Z8tc6OmrK+WupbolvNMkoaklo52MqeeCwI+SQYBDKcHJGO3flYs+Xdyu0a5qGutEn6SY8j+R0dKP0P5HWjt+smqqFkqSrVVPI0E7AYDMv+7H05AhsfTOse677Bt6zPc6iGWZEmhiKRkA5klSMHv27Fwf7DXXg1NJoxyTg2mdPpoPofyOk6aeh/I64d43ptaz3GS3XS+UVJVRp1HjkfBVcEjJ8gSFJx54BPkCda1037tahkqKYXelmrYRKBTI/ztJGGzHnGAxKkDJ7kEDODqVEdl5JL0k9D+R0dJPQ/kdQvcXiFT2ij27O1ACb5B1kM9ZHBHCOMZwzv2z/AKoAH1wdZ7Fvyluu4o7Z+66ympqtqpbdWSMhSqNM/Cb5QeSd+68h8wBPbT1FuiW9OP0P5HR0k9D+R0/6aNKiQzpJ6H8jpeknofyOnaX/ABooBnTT0PudHTj9D7nTtBJHlo4A1bnPT2+glq5ldkiGSquAT/bJA1G5dxVFJF+8aiDq0Dls+SdEBgEYPkhwwPb659BnGtXXOSW7WusmNsEVXUOlOKysEbRoOymGPB6krefmMAgA+vUvFXPSWiqqqdqFJYYi6Gsn6EAP/vcA8V/XB1y+o6mUppY3RrxxjFfqVndiME0ayRuHRhkMr5BH6EHT+kvofyOo5aG+DSjuMaQxU9bw+JhhlEkSu4GJEYYB+YgEgAMCD5jUnzjHY9zrfin6i5VMzzjr2fAzpp6H8jo6aeh/I6jlHvaxybYi3BcKhbZSy1M1MoqGHIvHI6EALnOemzdvIDJ8jp9ZvnaVLSLVS3+g6T8+BSTmXKOqMFCgljydRgefIYzq3Uq2XkkBiT0P5HR009D+R1GbVvOkutHe6y1Uc1yhtjIIjSSI5rA8KSqY8kDBDgdyPInXJi8UKCZKGpjtFcaGSkoamuqS8YFCKz+SGGcv3/iK5Cgg9/o9Qc0TzpJ6H8jpOknofyOorsne0W5Kw0zWmstzy0cdwo+uyN8RSuxVX+Uni2QMoe4DL+uJadKhp2M6UfofyOjpR+h/I6f9NGih2N6Seh/I6iPjJXvaPC/cdXTy9GcW6VYmMwjPIrgcWYgcu5IHmcdtS92CgE9h9SfoNfOTxn3nU773zdLpJUztbvi5BQUzys0cMYOAVUnALY5HH1PpppGTq+oWGHPuXp4KftCzLHaNoX2nS41clbFRw10lStOkVLx7ySu5wzgjAHYt/fz9SKqOobBwfI5PfXyuMQY4Pceh16Z/Yi3dVf8AV1dte611ZUh7dytvWqXdIFjfLxKhOACGDA47cSPI6GjJ0XW21jkz1z0o/Q/kdKYk9D+R0oORnTvPSpHWMfSj9D+R0dKP0P5HWOrraOlmghqKmOJ524xKzYLH9P8A5e41nxpcBTGdJPoD+R0ojT0P5HTjpRp0A1CeTKe/HHf9Dp2mL/Ok/sv/AJ0/QgEGmw/yU/tpw0yH+Sn9tDAefTXnPx32tXWnc9TuCKNnt1xkDmUdxDLgAq3pnGQfrkjz16M1irKanrKWWlq4I54JVKSRyKGVlPmCD56w/UOhj1uH05Ovdfc6f0n6nP6dn9RK0+Gvg8obC23XbtvsdspoW6KkGrnx8sEee5J/5EdgPMn9AdeskUKoUeQGB/bWhYLHabBblt9nooqSmVi3BM9yfMknuT+p10fMHVP0v6bHocbjdt9y/wCt/V39SyppVGPbz92NKLnuv/y0cE8yvl3Hby1Xe+tn3q97mqLhBLUdFY7bHTCO5SQhQtS5q/lUgZaFuOT3I7DGuDXbL3jGppKeOonjj+Iis8q3h4/3U3xcjxTNk5lXpNEMfMQIymMMTrrUjguT8FwssfzDhnl/F8v8X9/XXE3b+4KmjprPe64UoudSsFIFqWgkknAMihHUg8vkJ7Hvj6+Wqy3H4e7ra3xS001bPJPcq+W4QQ3Al5EeST4RkMjqiiNW/hBHEsDhiupHvjZF03JbNp0EtQzNb2aWprJZQZY51pmWKYYA5OJuJOMfXRQtnT4JVtKHbduNZt6xzxvUW5w9bH1TJKkk2ZOcjHJLP3bJP/jXcCKF4gYHngL21UVp2XvDb17kvMIiuVTPVUNbcTT1Ig+Nm41YqMBjgIpmh4qx7pGB5gaxW/a2/qats9Y1KtVWxUEiVJqrs5p42PXPFGRlcMS8YJKspAB+UoNNpApPwWvV1tup66ioqqaOOpq3YUsbj5pGRSzce3mFBOt7sRnv7ap3a+ztzw7V3LS3GjqopZ0ja1xw1yCandoOnP0nLOIiTnuWPLPcjJx14rDuKo8H3slZQzU1f1TwgoqtVkMQn5KCXdkyV/ij58SCVDAeSSoez8FkMiOOLLkHse2lRUAxxP8AbGqo29trddLcLfVXayLVzRUtOlGYr1JHBbWTnzDKXLPyyhOOef4M4UE8zbOyd5vUQU14hlpbVJWUlRWU0VzYBisNSs2OMjMVZ2g82y4XJwQRoqg2fgs7bLbfe8X6W0SPNWGrC3GVuow6qoAI1dhxwo7cUOFJOcEnXZZIyAvDsvcDj5f41BNrbWuVg2zuqGgo4I6+4XCvqaVGq3COHJ6PJgcp2IzxwR5+ffUS2zsHdVTUR0l7gqYLMss0opv3mVwWpI0UERyN26qu2OZ7kN5k6HyLZquC4a+uoLasLVk6QCeeOnjJB+aRzxRew8ycDSxXChkudTbY50arpo45J4gDlFflwJ/vwb21VdPtDd0l0s014pJbhV09bbalrg11PCGKKGNZojET87dRZHzjDcw2QQBrd3ztS/3DfVXdLXQsJJ6ehiorilyMXwTxSyNI7RA/OOLAYweWSpABJ0UkPZ+C0WEbD5xnuD3H1+mtWhuVBcDUrR1CTmlnemmCZPCRcclP6jI99U221PEJ7ldpjStFS1fzVVLDdWUVgWsRyiOXLLyg5oHPDz44UYxwN0Wq6bYsteK+menWtF1nttAl6kWSGZxGIZOov82QKOAjBZgT8oYZIYnKvY9FOsbDDKCCfqOx0pRWUhhkHsQR56piHZW8ZrtcqypqryBUU0ojkprgkDNC9MESD5iSjI3zfwgBhnkcnXepdu7ubwiq7HEqWy59Y9BYqk82p+srMpYuwR3TmuFYqMjBAPZaoak/BPL3ZrferU1sr4nkpHZGeJXZA4VgwU4xlTgZXyI7HsdZblX0FviSqrp0hQyxwo7g/wAcjqiKO31ZlH+Rqsbfs7d6RWxKeurKWiq5mhulPU1o501Ksomj6QjJAJw8WAxIWX+L5ANcyk2VvUtGZqd+rDNTSXGSa6mVLpMlfDMZ0Un/AEgsSSAA8T84TGFB0wt+C6wEXJUYye+B5nWlFW2+a6zUEc0TVlLGkssePnjWTlxJ9OXBvY6qu77K3zNb5I3uEtXBQ1kdNT06VZL1lvQyPlyzKvVLPECGIyIB3+Ygyzw227X2ZpJrl8c9TJbqOCSapqY5Sxjac8cr3yokCknIOBgnBJTQ03fYmiqi+SgZOew+usNXSUtXAYKmnimiJBKOoZSQQR2PoQD/AI1n0ajZIaUQnJUEjv3Gh0RwVdVYH6EZ076aNABo0aNAw0uk0aANG4Xm0W6YQ190oaSVl5BJ6lI2I9cMQca1junbeP8A7ftJ/wD10X/+tYb/ALM2luCuWuvm27TcqpYxGJqqkSRwgJIXJHlknt+uuefDLw9IIGyNujP/AOHx/wD9ag9/ai2PpVzZn2Jvay7vp6n4B2hraOQxVlFMy9WBgcd+JIZT5hlJB9dSbUI8LvDi0bHiq6mJaaoute5aqqYqZYEC5ysUUa9o417dh3J7kk6m+jHtqt+4s2m79PsYqyZoKWWZI2laNGYIPNiATj/OMa85+L+xtzb82zbp9rXiOkuUtGsbOaloIuEsnWlHIAtxYkAgdz01ByM69HS4Cgn6d/PXizbG6r9ZRM9sut1giM8jsiyrPgs7E9WJwV6nf5iuAT3HY6y9XHJcZY5U0Zc/W4umh/yxbT917FvbQ3tTWqntfh5XNUfvGCkhtPNaeXrpMI+mJGXGAp/iGDkLhv7R/wAEfD7eW0bxUVu7q2nEgroGhEJDRukUMkTPGFOFDo0akYBPDuCQDqMp4s3MXf8AesdNZp7vFEYfjXtkkcioBj5l6gTOCRnHl+muNefFDd97iZxeqySHH8dOUo4AP+5QCR/k65uLp+qjCacu77/H4SHn+s9BcJQjLhcr5/LPTU+4rTbd720VVwpoDXQyUyfEyrFyPyuOHL+I5UDH/uGNT0sCNfPnatov+7vESzvR2eHc0sNSKiSGoqHEMkaOpblNIe4HY/Lny8j319A4++T6nXT6HG8eLW75JrqX1D20cV8kd3Jt2guV5t91ku9fbKylikgjelqVj6iOyMyMGU8gSi/rrj0XhNtGmoIqBIqlqWGthq6eIygCLpFuMQKqC0eGIKsWJBwTjTN+7dr67fm3rvFaWuFFSQSxTBUppOLNLEwyJ/4RhW+ZPmGNR2ebxRgr6W2yyXB6uoFTLTtDNTdNFTpCHrErg8ebdUL3c4Kdhgbkq7kHV9iUWbwy21Z7mtwt7VcbR1orIUWVeEbAykqPl5FSZnJDE+YwRjXdoNuQU+7azca3C4PPVU6Uz07yqYFRCSgVeORgs58/9x/TFdw2XxQttK9DZ3FOqJUtT8ZoDAC7zueYYFjIXaIof4QM8vqD0ZbT4ni+1dLHfKoW0vDHFOPhy/Q5w82BI7TBevk8OJyMfTR79w48Fns6K6ozqGfPEE9zjzx66XVbb629fanetuutitcNRVxU8UQra8wy08XFpDy4nEscgLZDR5D5AYYA1qRweJ0dLaI6dbl1kflWyVlbSyciWUOCEUDhjmVxk/TA7aKHtXsWiZYussPUTqspYJyHIgdicencafqB7H2veKHdUt9vlbVVtVLZKSlaWeSJiJg8jzKoVRxUErjHY5+uBieaTVEk7DS+ek0aRI5u55r1T2aaXb9DR11xBXpQ1VQYY2HIcssASMDJ8u+oZ+9/GAnH/Ru1AP8A88k/+lqxdGouN+9E4TUVTin+/wDsoTfG4vFSh3rt5qW02pL1PyiS10V3kqI6unzl2ljZAsaqcf62QRnHzZxq+IGdolMihX4jIDZAP1GfroMMPxHxBiTrcOHU4jlxznGfPGe+NPGlCDi3zdksuVTSSjVCjWrdaj4O31FWEMhgieXgPNuIJx/nGtrXN3P1Bt64GJplk+Em4mFgsgPTbHEnsG9CfrqTV8FRXdZDv1aOiptoVe2FpkoUVjco5yXlcZ5o6Hsq5B4lTy9RrFavEc3a7z7ct0dOLuY5Y6ZpIpuMc0akkzpxHBCR3wSV5KDnI1572PvbetNtL4Xam5H+NpreGWiuHGZEeNCz8kkHKMFQfmVuIYDIAYEG0PG/ct7glvtFTWeluFUsNHWVUFnaSoepP8CrGZcSrhcfKQw+XkuO+vPTwZlOKUuz5+U+3s/xXPsbodRheP1Jr/sv2a72enrBcN2Pcp4d0UtipImRfh1t000pBz3LvIqjB+gC9sdzrq7Fn6s94SPLxLXcxKAQCXjUlcH6qR3/AO4a8lbt8Qt0R00y3feFwgqXUqsUlZDTvk/RaWjVn/OUfrq//wBkOWsn8JXkrauoqGN1qCgnyGRTxOOLEsuSS2GJPzZ8iNbOl6bIs+83XcryZo6aRi/uXCvlqJX7ZFnu94r5am43BFulKIK6hjqVWKqjVGQclKluwc9wR3A1LT28tVduqybji8Qp7/t2xrPUvTgCqq5YGhBWF0Uxk/6sUgZlHEZRhyJwTrrp1wYpHaXw02n0aM1cU1WaJKlBJJKF6izKVfmIwqnAJwcfKSSO/fTtmbA2/t2poq62VNXK1MkscTtIhV45FjUq3BQGwIkwfPt3JzriWLZd4t3h1fNoXSnWvpHIekFBVGNnEmGlQGUnB6od/nJVupx8sjWjY9sb8p7hTSwNLaaaaOGKSOmkgjSGJat2cmEBkWZomUkx5XOcfTRT8kfwSqfw5tVRW1lxF4vi1lTWfGpUx1oV4Jen0mMZC/KDHhCDkYUfUZ1J7La6CyWiktNsgWnoqSFYYIwSeKKMAZPc/wBzqqbfT+KCTXC2WqU001EnBC4gWiBaBmwFChi5do2DD5R3z9QZFtan35Bf7Y93nq6m3iKUVCyvCgj+ZihPAsZHxwH07d85yC32CLXgsAOp8mU5/XQGUkgMCR5jPlqoqTa+8Ue00NNA1v8A3Q9REbhHUxt8RFUVcbMYlOSCIRJnmBg4Az56bS2LxLo6qqqEkkaoqRGjVEVRAHkeNSkLy8lwYwO7hQCcjH1GlQ934LfLoGClgGPkCfPSkgAkkAD6k6qivsfiJVV1FXl2avoa+d5ZXqIRG0DqVK0oAzGSnEAyA4bOf+WtG7WnxZr7Hc6GsnnnWr68UkUEtPESWjkVDGzE4hyU5KQG7dv92WojcvgubPbz1E94V+/aa4pHtjb1kuFGYQWlrLm8DiTJyvEI3bGO+frqRWyFqe10lPIArxQojBT2BCgHWzqElfBZCWrtqytxePGTP/3L2n/++yf/AEtcT9n+97yrr1faGvjiqtu008gp6z456kRT8vngimdQ00akt3I+THHJ+lx6x08ENNEIYIkijXOERQoGTk4A7eeq/Teydvgu9aOjjqufuZP76XSaNWlBDtz1VYb3VpRSQQ1VPbf/AE7TqXQvKxwzKCCUUxjOCD389RS7b4vOzIo/+tJLHO1W+KRrfHPFEAgy/Jn5fOcjCjAwCSdV5+07UzU3i9aZKe51dtqUsymmmWuaBOoZ3+UcO4z/ALgR3ABH8J1WO5vE7fNt3uNvVl/lu1uuaRVVrjqbfBVSQ8m+QSoUBIyGIYdyoVx2bGuD12PMpz0lVq7rx38/wbunnDRTkrSdNXT5Vr9/b54PU1Rct53KBLpZDYILTVRQz0y1lNUPVqrqpKuisFzknvnsME+Wn7pv9m27frHdL1dKO30vUngL1M6xgB488sk+QKAH/uGvNF28S91XW2rWXHeF1oaRw4ZRWUtvpmZCVYxvFG00yZHmAo74zkagNFbr74kbjpqXb8NRuScO8ojqpJRBKq8c/PUS5dfo3EKeOdWQ6fJvGUn2r+/khPMo4nKEbtfz/o+i1PLFLCksTq8bqGVlYEEEZBBHmNQy4+H9irqiugmuVz6dZVG4fCipQpFPzVxMilSQQy/XK9yCO+pVbIWittPFJDBC6QIjxQH/AE0YKMqv/tHkP0xqq63a28Ka/wBZVWaz2t7u1bWVSXytWOTlHJGwgRTy6iMmVj4YMeAT9ddtX2MMvsSWu8K9o1ccgnpp3eW3R29nEuDwjkEiuABxEnJV+bHcKoxgY1vWHY9ss8FfFQVdwikr6RaaadJVRwFMhDpxUBHzK3cD07dtROmo/FhY6bNZUs2G6RlanUR/O3IVA7l/k48ChGD/ABDWZrT4p01Gxpr3UVUpVVZaiSBvk6UDOV4qv+p1PiApJxjj9MHRT8kePB208M7Uu3obA14vz2yPmr05rQFmifjyifCjKfLn6N8zfN8x1N0CqnLIC4znPbGqwtdg35+9upV3S5COr+HerkNRAFCpBKpjCYbi3U6XIqcMCe+c46WwaDdsM8lHueCU0q0ccUccbU/wQTpoCgjUc+fLqA/7cYx2xiVDTr2J0lRBICUmjYDGSHBxny0/PpjVQ27Yu47ZT3CmtNJRW+mkmmmSlhjgEU7mtLoZBxyeMGOIyAp7eeu9tO1eINJe6WpvN5qaulaSP4mKSSAoFankMnEKgPyzCIL38i3n30q+QU37on1Q0y08rQIskwQmNWbiGbHYE/QZ+uoCt18XiBy2htRe3cfvyU//AMWrB8tKT21XKN+5fCaj3SZRvi9fvEqi2slZW0Fnss8NVG1FNb75M88lRnCRLD0sT8skdM9j59sZFr7Iqb7W7Wt9VuW3w2+7SQhqqnifkqN/4yMEjJwTjJxrrTQQzNG0sUchifnGWUHg2CMjPkcE9x66yajHHUrtsnPMpQUVFIRjj/J1WF1TdlzpC23LxR2WqNwqJpzWUAqomwxQRMvJWBAUNlT6fTVoPjC/9w14atN7udJvvcNNabnd7VWyXSsUU9PXN8SWMkgDtHgpPwPEk4IYdsjz1k+oSePGp32ZPo8cs2ZYoq3L8HoOh3zVWfcFs2LdGjqbo8cdO89PSyRtJM4JEqJxKCL+IgFs4Q+mNP8AD6j8RqS+TVfiBX7ek4OIaFbPTsg6HFuZkJ+jERsFOSGHodeYtr+LO9P+paya83aK5XazzmlaupLbSuzRM/TxBLwxyLE4Vhh84BHfWa/783fcLXXybg3XXxzwSMhilujwdP5+OOhTKqmQZGYwzHIOcY1zMePNBSTldy/b3Xsv/pq/45zSS7Rt/wAN9z1/trclqh3hdLJPc6COrq2iqKeF6lEmkJUoVWMnkf5XLIHcH9Nd7dtmor/Yai2V881PBKUcywyiN0ZHV1YMQQCGUHXjP9mTbt+u3jHa90xbemu1so5uFXXV5aMUz9I4kHNy7OoIC5BB5HyxkevPEqy1u4dmTWu3xwNPNU0rATKrx8UqI3YsrdmHFSeJ8/L667XSwccUU3yczLk9SUnrX3NGl8NtvPdnvFVU1tyqaiEx1T1Ukb/FAo0YLkIDkI5UcSARjOcawU/hJtKCWhkhjrFNJSilJM4Zp1HUIaRmUsXBlkPIEElu+dcqm2nvLbkc1FZ7nWT2uOWNhBSNBAzLIZnn6KspWMh2i4qTxCBgO5zrB+6fFOlmd4bhOZKmqimq5FlilTPwsSf6aMV4oJVk5r2yCpH11rKqXgmd62hbrht6islRc7pBbqSmFLLHFV9MVMPEKUlOO4IXuRg9z3GTpLBsuwW69m9UUlTL/Oakhep5wUvWYNMYV/282GT3OO4GASNQ65WjxCveyt72q70/N6+l42uB6iJ8OeYdAwAHDsmOQHme3nrnWOxeJNnMMFjoloqSW5yVTCWWBQEdkDLLDH8ijiGIEefU4YklBfPYurI8gw7effSj9NURcG33t41ddVS3SKrubIkSxy08lRNUJFGi54oUMQYyf6Y+cjB8gcWL4bw7zjnuzbsqHk5TD4deMfTHzPkxlWLcCvAYYAjB9ToquSSnbqjXuF08UUqplotp7blgEjCJpL1IrMuTxJHS7EjHbUT8Rb54nw7Nuc12s23rNRpDyetpdxTRzQkEFWQiLu3LAC9+WeODnVynTJoopU4SxpIuQeLKCMg5Hn+uqZY21WzNUM0YtPVf5/2RXwiuW6rrsO31u8beKK6up5rji0if7ZHT+mzDuV+n6ZwJFeqmWks9ZVQQ9aWGneRI/wDmwUkDW3qqv2iNwV9Faafa9v4pJfKKt5uUyXSNFBiBPypyMgy57Kqt9SNRyTWHG5SfCRBJ5cn6V39iHeLXh/ubce4du3Dbt7paSlolh+MVuYlkhi+YxxYUqwckniSPm4knsMa++9x3Xxa2Nc7TsGakW8UNTBWgOT0XQOw6bNKgQSg4YAgrlMjy1TkG6NwbasV3j21fqyz/ALspWeNoagPAjIAQstOxdFV+MiKy4HIL/wAtZ9teKu8Lnt+qrLZWVNsjqeVTM1PHSUjyOnFZJXfpkGMluPUUBgwC4Y64cZZJyg12jaa454tef5XybckMcIu//VU+eOaf9pnovb1NNtDwmmprxWQpJTQfETu4EcCSDgzFR5IrSKWx5AyHy8hZ9gvVvvlrguVtq6erppRkSQTLIoP1XkpIyD2Ovn1vK6XG51MlC94qbvO8bGVYK+esQPyHaV5CqBRjOVUjsNey/wBnPb982z4W26y32z0NrqqaWTEdNMJOohbkJZCCR1GJJOCR5eXkOh9Oc3tKT5fsUdbD0prElwvf544N+q8NNv1VCaKW4XV6Zap6uljaoR1pZnZ2ZowyEd+pIMHIwx0+6eFu07gaySSCoWeqNM5lWXvE8AwjoCCoJ/3diGwMjsNQqh8PN50i26pWojliobxLdYKA1RUrPK8vULP3XhgqVGDgyvkdhrp0ds8U56GOkrqqqXqJVRMRVQoY1eIdN2dcsWVyQAB5YOVxrqGBJeCb2LZttsltr6G2VFZTJXJGJHWUc0KRLEGTthTxUZ7Yz3wNcmn8N9r0LWyE1dwKUkVPD0JK35atKdi1OJVwOp0ye3lkAA5xriW+2eJzVCU0lyrqWk6VJFyaSneQRDoCUl+/+sMVGTxIORj6a2902C6zeJNNeYrZPV0q2yOnWeJaVpI5Fkmblyl+ZDh1IZB3Pn5aOBv7El2fsyz7ankmoJK2ZzAlLCaqoMvw9OhLJDHnyQFj55PlknAxJexAIIIP66pyA+KzXqhtlRPP8WkHWnkieAUZzOgBfK8ivSDgovzc8nyKkZ7RY/EyjttPaKaqlooYKWGnV0ngZI4gsSkICpPXB6pLNleOAATjBVgpV2RbedGq1pLT4kNfamCqvVUluNegEsZhz8MGfBRiCQ3DphxxGTkg6soZx389JqiUXfscPf73OLZN8lsywvcUt07UomOEMgjPHl3Hb/OvmRArKg88YGvpr4hmsGxL+LfQG4VZttQIaUf1nMbAJ/nXzQdgoERBDJ8hBGCCO2CPof0012OR9Vb/AEpDSurS/ZTa6r462L92U0c/yzCq6hwI6cxkSP8A3GVwPqTqrgjN5asb9m2/Um2fGiwV9yZYqaZ3o3kZuIj6yFFY/pyKj/OkYOlaWaNn0HXHAAa1rzWi322arEfUZAAiZxzckBV/ySBrZAATB8x56jfiRVvbdsS3Mw1E8FFPDUTx08LSytGrgkqq9zjsxx9FOq8spRg3Fc0epgk2r7HLtsdDco7lXXONamqiqJIp3MsaowjC9gFY8Y8qCFc57AtjW3sa5v8ACW2leUy0lXTFqJmkjkePhgGIvGSjjGCrDzAIPcZ1QdBcdo2lK212ffdELHuCSWW7muBhqaeN0KJFEvAFgEJwf4sj5jg6mvgtdLAKyxbQ2jWXO8w2vqVFZdpaRliYdIpxZsABnyoAA7BPqfPk4JyWZ0n3X5T7t/Y0PLCUUnJcp+/Z+y/vsXtpNKPIaO2uyZhifzpP7L/50/TF/nP/AGX/AM6yDQhCf31hjdUUI7BSvbv9R66NGlJ0NIf1Yvup76TqxfdT30aNR2ZKg6sX3U99HVi+6nvo0aNhUKJIvuL76OrF9xPfRo0bMKDqxfcT30dWL7ie+jRo2Yah1YvuL76TqxfcT30aNLZj1DqxfcT30oki+4nvo0aNmLUOrF9xffSdWL7i++jRo2HqhepFj+YnvpDLF9xPfRo09mGqDqxfdT30dWL7ie+jRo2DUBJFn+YnvpxeLtl099GjQpCcQMsX/NPfTTLEP6ie+jRocmCigEsWf5i++l6sX3E99GjRsx6idWL7ie+jqx/cX30aNGwtRerF9xPfSdWL7qe+jRo2YUHVi+6nvo6sX3U99GjRsx0HVi+6n5aOtF91PfRo0bMKDqxfdT30dWL7qe+jRo2FQdWLP8xPfS9WL7i++jRo2YUHVj+4nvo6sX3E99GjRswo1LzSUl1tNXbKiZkhq4HgkMcnFgrqVOD9Dg+eqsPgLssUskLVFVNK83UFS8gWdF4heAePieIx2Bz5nRo1TmwY8tOa7fdfwWQnKKcfZ+3DX+Sn679n7xOirHWG+26rhyQr/FqpYZOP44iR2/U/31YHhT4Dx0EdRW72moq6uEqGkUTGoEChe/8AEFXJbv2Xt66NGlPDDJGpLgx4Okx4MvqQ7r7E6234T7dse7huWC6XCSpSeSaKEyosScwwIwFyRhj5n09NWGskSqB1E7fro0anixQwx1xqkbMmSeV7TdsOvEf6ie+jqxfcT30aNTUmyGqDqRefVT30vViP9RPfRo09hah1YvuJ76TqRfcT30aNGzHqHVi+4nvperF91PfRo0bMKE6sX3U99L1Yvup76NGjZioOtF91PfQJYvuJ76NGjZhQdWL7qe+k6sX3U99GjRswoUSRZ/mJ760dw26hvdjrbRWysKWtp3p5unLwbi4wcN9Dg6NGi7QVRUt+/Z82BcrO1F8VURTsrpJVicJNKrEHg7JxyowBgjGBqrLj+zhv6kuMlHt2/RrZ6WF6e3F65U6cUg/1MYj5KxJOWHzEds40aNU4emxwlcVVfL4+3j8Dzt5Y1L+EWntX9njYW3bVPSQ8evU07Qy1PENJ8wwSCxODnv2A1PvD/Ztl2ZTVMNrrKuf4p0eZqmYNllGAQAAF7eg9PTRo1Xj6fHjyOcVz5bbf7tsvlnyTx6N8eOEv8Eq6sR85F99BaL/mnvo0a1WZ6E6sQ/qJ76OtFj+Ynvo0aWzHqg60X3V99AkiP9RPfRo09hUL1Ih/UT30dWL7ie+jRo2HqHViH9RPfSdaLP8AMT30aNGzDUOrF9xPfR1Yvup76NGjZhqHWi+6n5aOrFn+anvo0aNmFB1Yvup76OrFj+Ynvo0aNmKiBbw8Ldnbpv73u79WeaRFWSF5g8D8U4qSjA4wPTHfvqlt2/swgbhlrNoXOGKjqLcaaaJ614ZS4zgcuLjgw4Bh27LgDvo0azS6fHKTdd+/cv8AXyaat8I6Wx/2aki3H+9t+XG2XSCOgigp6ccpDHIgUZJYBSoAIA44APlqydveEWzrLvUbrpKyt+NSYzRQrULHTxsUKHCIo7YJ7E476NGpSwY1k3rn8kceWccekXSLKjeMIB1EOP10vWiH9RPfRo1ffBVQvVi+4nvo6sf3F99GjRsx6ob1YvuL76USxfcT30aNGwai9WL7ie+k6sX3E99GjRsLUOrF91PfR1Yvup76NGjYeodWL7qe+l6sX3F99GjTUhUI0sRGDKg/+LVSVvgJsCW3ywU6uJzK00M805eWNypUYkUq/Hv5Z75Oc6NGqc2HHmSU1f8Afguw5Z4rcHVlLv8Asz77tMVPBt29WyL4aphqYZo66WJVkEfGR+DRsQxPkQTxHlqe+FP7N9jsNrqpNym3TXSpqJm5wx9URwt2VA8gyTjOTgdzo0aql0uOUHjlbT+WRxzljyerHvVe3Ys7w18NtubCFQ1ora2omqY445nqagNlUJK4VQFB7nvjPfU5EsQH81PfRo1ojGONVFUhTlLI9pO2IZovup76OtF9xPfRo09mR1QCWL7ie+lMkP3E99GjUthaidWL7i/lperF9xPfRo0tmGonVi+6nvo6sX3U99GjRswoUSxfdT31GPEPZu3d8W2GjvLyKady8E8EoSSMkcWAJBBVgcFSCD29Bo0aUqmtZK0yUbi7T5K33n+ztsu+bTNppZ3FcGJWuqG5SvycMwdk4kgkDzyBjsNV/dv2VrtPIsVHuOiSjenWCWOpnqJFUIwMXFQB2QZwpOMnPn30aNZ4dLig7iq/Lr9uxPJmnkVT5/vkuNvBjYk1roLZUwsaaiBxDTstPG5KBWyEAJBA8s/51Y9HFS0lNFTQcI4okWNFB7KoGAPYaNGrOnw48S/RGgy5cmWt5N0ZTNEP6qe+k60X3E99GjVrkyrVB1Yj/UT30peL7ie+jRpphQnWhH9VPy0vWiP9RPy0aNLZhqJ1Yvup76OrF91PfRo0bMKFMkR/qL76qPxx8FNu+IlL8VQG3We/mZGe5Cn5NLGM8kcKw5E5HzHJGNGjTTIzxxmqkVpUfsnNFTUwpt9R9byqWloPl8/NAG7dvo2e/wCmrz2n4aeHe24KZLZtqzrNTsJEqJIFlm6gGOfN8sD/AGPb6aNGhyaZXi6XFj5iia9SI/1E99I0sQ85F99GjTsuo4dx2vtG5VJqa+w2aqnJyZJaOJ2J/uVzrq0NPb6GnWno4qenhT+GOJVRV/sBgaNGopi0SM/Vi+4nvpOtF91PfRo0bMlqLGeTM+CAcYz6D66f/nRo1NEGf//Z"
+                  alt="Musa's badge evolution ladder"
+                />
+              </div>
+              <div class="ladder" style="margin-top: 14px">
+                <div class="ladder-step">
+                  <div class="lv">LEVEL 1</div>
+                  <div class="nm">Explorer Scarf</div>
+                </div>
+                <div class="ladder-step">
+                  <div class="lv">LEVEL 10</div>
+                  <div class="nm">SA Stripes Unlocked</div>
+                </div>
+                <div class="ladder-step">
+                  <div class="lv">LEVEL 25</div>
+                  <div class="nm">Geometric Trim</div>
+                </div>
+                <div class="ladder-step">
+                  <div class="lv">LEVEL 50</div>
+                  <div class="nm">Protea Badge</div>
+                </div>
+                <div class="ladder-step">
+                  <div class="lv">LEVEL 100</div>
+                  <div class="nm">Master Explorer</div>
+                </div>
+              </div>
+            </section>
+
+            <section class="hg-section" id="sounds">
+              <div class="hg-eyebrow">10 - Sounds</div>
+              <h2>Sounds</h2>
+              <div class="flag-note" style="margin-bottom: 20px">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 2l9 4.5V12c0 5.5-3.8 9.7-9 11-5.2-1.3-9-5.5-9-11V6.5z"
+                    fill="currentColor"
+                  />
+                </svg>
+                No audio exists yet. This section is principles only, until
+                sound design happens - treat it as a brief for that work, not a
+                spec.
+              </div>
+              <div class="hg-grid cols-2">
+                <div class="hg-value-card">
+                  <div class="k">Short, never startling</div>
+                  <div class="v">
+                    Sub-second cues at a volume appropriate for a classroom or a
+                    bus ride - nothing that makes a phone bark out loud.
+                  </div>
+                </div>
+                <div class="hg-value-card">
+                  <div class="k">No buzzer for wrong answers</div>
+                  <div class="v">
+                    A gentle, neutral tone - never an alarm or error-buzzer
+                    sound. Matches the "guide, not teacher" voice value.
+                  </div>
+                </div>
+                <div class="hg-value-card">
+                  <div class="k">One triumphant motif</div>
+                  <div class="v">
+                    Reused for streak-saves, badge unlocks and track
+                    completions, so it becomes recognisable rather than novel
+                    each time.
+                  </div>
+                </div>
+                <div class="hg-value-card">
+                  <div class="k">Muted by default is fine</div>
+                  <div class="v">
+                    Sound should add delight, not be load-bearing - every cue
+                    needs a silent-equivalent (motion, copy) that works alone.
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section class="hg-section" id="writing">
+              <div class="hg-eyebrow">11 - Writing</div>
+              <h2>Writing</h2>
+              <p class="hg-lead">
+                UI copy follows the same voice as Musa - because to the learner,
+                it's the same character talking.
+              </p>
+
+              <div class="hg-h3">Rules</div>
+              <div class="hg-grid cols-2">
+                <div class="hg-value-card">
+                  <div class="k">Buttons are imperative and specific</div>
+                  <div class="v">
+                    "Start lesson," not "Submit" or "Go." The label says exactly
+                    what happens next.
+                  </div>
+                </div>
+                <div class="hg-value-card">
+                  <div class="k">Wrong answers get the right answer back</div>
+                  <div class="v">
+                    Encouragement plus the correct answer, restated - never just
+                    "Wrong."
+                  </div>
+                </div>
+                <div class="hg-value-card">
+                  <div class="k">Empty states are an invitation</div>
+                  <div class="v">
+                    Say what's missing and what to do about it - never a dead
+                    end with no next step.
+                  </div>
+                </div>
+                <div class="hg-value-card">
+                  <div class="k">One exclamation mark, max</div>
+                  <div class="v">
+                    Never stack enthusiasm across a whole message - it reads as
+                    hollow, not warm.
+                  </div>
+                </div>
+              </div>
+
+              <div class="hg-h3">Before / after</div>
+              <div class="write-pair">
+                <div class="cell no">
+                  "Submission failed. Please try again."
+                </div>
+                <div class="cell yes">
+                  "That didn't save - give it another go."
+                </div>
+              </div>
+              <div class="write-pair">
+                <div class="cell no">"No data available."</div>
+                <div class="cell yes">
+                  "Nothing here yet - start your first lesson to see progress."
+                </div>
+              </div>
+              <div class="write-pair">
+                <div class="cell no">"Incorrect! Try harder!!"</div>
+                <div class="cell yes">
+                  "Not quite - it's actually Pretoria. You'll get the next one."
+                </div>
+              </div>
+            </section>
+
+            <section class="hg-section" id="accessibility">
+              <div class="hg-eyebrow">12 - Accessibility</div>
+              <h2>Accessibility</h2>
+              <p class="hg-lead">
+                Already built into the app's CSS - documented here so it stays
+                true as the product grows.
+              </p>
+
+              <div class="hg-card">
+                <div class="a11y-row">
+                  <svg viewBox="0 0 24 24">
+                    <path
+                      d="M4 12a8 8 0 1 1 3 6.2"
+                      stroke="currentColor"
+                      stroke-width="2.2"
+                      fill="none"
+                      stroke-linecap="round"
+                    />
+                    <path
+                      d="M4 16v-4h4"
+                      stroke="currentColor"
+                      stroke-width="2.2"
+                      fill="none"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <div>
+                    <div class="t">Reduced motion respected</div>
+                    <div class="d">
+                      Every keyframe collapses under
+                      <code>prefers-reduced-motion: reduce</code> - no animation
+                      is ever the only way to perceive a state change.
+                    </div>
+                  </div>
+                </div>
+                <div class="a11y-row">
+                  <svg viewBox="0 0 24 24">
+                    <circle
+                      cx="12"
+                      cy="12"
+                      r="9"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      fill="none"
+                    />
+                    <circle cx="12" cy="12" r="3" fill="currentColor" />
+                  </svg>
+                  <div>
+                    <div class="t">Focus is always visible</div>
+                    <div class="d">
+                      A 3px sky-blue outline with 2px offset on every
+                      interactive element - never suppressed for aesthetics.
+                    </div>
+                  </div>
+                </div>
+                <div class="a11y-row">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M4 9l4-6h8l4 6-10 12z" fill="currentColor" />
+                  </svg>
+                  <div>
+                    <div class="t">Color never carries meaning alone</div>
+                    <div class="d">
+                      Flag red/blue/black are accents only. Status is always
+                      paired with an icon or a label, not color alone - and
+                      Musa's expression backs up copy, it never replaces it.
+                    </div>
+                  </div>
+                </div>
+                <div class="a11y-row">
+                  <svg viewBox="0 0 24 24">
+                    <rect
+                      x="4"
+                      y="4"
+                      width="16"
+                      height="16"
+                      rx="4"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      fill="none"
+                    />
+                  </svg>
+                  <div>
+                    <div class="t">Tap targets ≥ 44px</div>
+                    <div class="d">
+                      Clay buttons' padding is tuned to keep every primary
+                      action comfortably tappable on a small phone screen.
+                    </div>
+                  </div>
+                </div>
+                <div class="a11y-row">
+                  <svg viewBox="0 0 24 24">
+                    <path
+                      d="M4 6h16M4 12h16M4 18h10"
+                      stroke="currentColor"
+                      stroke-width="2.2"
+                      fill="none"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                  <div>
+                    <div class="t">Ink on cream passes AA</div>
+                    <div class="d">
+                      Deep Green (#21543D) on Background (#F6EFDD) is the
+                      default text pairing sitewide, and holds contrast at body
+                      sizes.
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="hg-h3">Contrast - measured, not assumed</div>
+              <div class="flag-note" style="margin-bottom: 14px">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 2l9 4.5V12c0 5.5-3.8 9.7-9 11-5.2-1.3-9-5.5-9-11V6.5z"
+                    fill="currentColor"
+                  />
+                </svg>
+                Checking this table against the real hex values caught two real
+                failures - white text on the gold and coral buttons was reading
+                at 1.6:1 and 2.8:1. Both are fixed in this version: gold buttons
+                now use dark brown text, coral buttons use near-black, and the
+                primary green button uses its darker tone so white text clears
+                4.5:1.
+              </div>
+              <table class="hg-mtable">
+                <thead>
+                  <tr>
+                    <th>Text</th>
+                    <th>On</th>
+                    <th>Ratio</th>
+                    <th>Standard</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="k">Ink #21543D</td>
+                    <td>Background #F6EFDD</td>
+                    <td>7.6:1</td>
+                    <td>AA text ✓</td>
+                  </tr>
+                  <tr>
+                    <td class="k">Ink-soft #4C6659</td>
+                    <td>Card #FFFFFF</td>
+                    <td>6.3:1</td>
+                    <td>AA text ✓</td>
+                  </tr>
+                  <tr>
+                    <td class="k">White</td>
+                    <td>Primary button (green-dk)</td>
+                    <td>4.6:1</td>
+                    <td>AA text ✓</td>
+                  </tr>
+                  <tr>
+                    <td class="k">Brown-dk #6E4826</td>
+                    <td>Gold button</td>
+                    <td>5.0:1</td>
+                    <td>AA text ✓</td>
+                  </tr>
+                  <tr>
+                    <td class="k">Black #111111</td>
+                    <td>Coral button</td>
+                    <td>6.7:1</td>
+                    <td>AA text ✓</td>
+                  </tr>
+                  <tr>
+                    <td class="k">Icon fill #7A4E00</td>
+                    <td>Gold badge</td>
+                    <td>4.5:1</td>
+                    <td>AA non-text (3:1) ✓</td>
+                  </tr>
+                </tbody>
+              </table>
+              <p class="hg-lead" style="margin-top: 12px; font-size: 13px">
+                Icons and badges are graded against the 3:1 non-text standard,
+                not the 4.5:1 text standard - they're carrying a shape, not a
+                sentence. Anywhere a color sits behind actual words, it's held
+                to 4.5:1.
+              </p>
+            </section>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
