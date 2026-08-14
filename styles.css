@@ -222,6 +222,16 @@
   display: none;
 }
 
+/* generic horizontal scroll wrapper for tables on narrow screens */
+.table-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 0 -2px;
+}
+.table-scroll .hg-mtable {
+  min-width: 480px;
+}
+
 .hg-content {
   max-width: 920px;
   margin: 0 auto;
@@ -1100,27 +1110,95 @@
     background: var(--card-warm);
     border-bottom: 1px solid #efe4cc;
     overflow-x: auto;
+    scroll-snap-type: x proximity;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
     gap: 6px;
-    padding: 12px 14px;
+    padding: 10px 14px;
+    /* fade the edges so it reads as scrollable */
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent 0,
+      #000 14px,
+      #000 calc(100% - 14px),
+      transparent 100%
+    );
+    mask-image: linear-gradient(
+      to right,
+      transparent 0,
+      #000 14px,
+      #000 calc(100% - 14px),
+      transparent 100%
+    );
+  }
+  .hg-topbar::-webkit-scrollbar {
+    display: none;
   }
   .hg-topbar .hg-navlink {
     flex: none;
-    padding: 8px 12px;
+    scroll-snap-align: center;
+    padding: 10px 13px;
+    min-height: 40px;
     font-size: 12.5px;
   }
   .hg-content {
-    padding: 32px 18px 90px;
+    padding: 28px 18px 90px;
   }
   .hg-hero {
     flex-direction: column;
     text-align: center;
     gap: 18px;
+    margin-bottom: 48px;
   }
   .hg-hero img {
-    width: 170px;
+    width: 150px;
+  }
+  .hg-hero p {
+    max-width: none;
+  }
+  .hg-section {
+    padding-top: 40px;
+    scroll-margin-top: 64px;
   }
   .hg-grid.cols-3,
   .hg-grid.cols-4 {
     grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* small phones: let text-heavy card grids stack to one column so
+   copy isn't squeezed into ~140px; swatches / icon tiles / badges
+   stay multi-column since they don't rely on prose. */
+@media (max-width: 560px) {
+  .hg-grid.cols-2:has(.hg-value-card),
+  .hg-grid.cols-3:has(.hg-value-card),
+  .hg-grid.cols-2:has(.hg-card),
+  .hg-grid.cols-3:has(.hg-card),
+  .hg-grid.cols-2:has(.hg-saydont),
+  .hg-grid.cols-2:has(.demo-card) {
+    grid-template-columns: 1fr;
+  }
+  .hg-content {
+    padding: 24px 16px 80px;
+  }
+  .hg-hero img {
+    width: 128px;
+  }
+  .hg-hero h1 {
+    font-size: clamp(24px, 7vw, 30px);
+  }
+  .hg-section h2 {
+    font-size: 22px;
+  }
+  .hg-lead {
+    font-size: 14px;
+    margin-bottom: 22px;
+  }
+  .demo-row,
+  .spacing-row {
+    justify-content: center;
+  }
+  .hg-badge-tile {
+    width: 76px;
   }
 }

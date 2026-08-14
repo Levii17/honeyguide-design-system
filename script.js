@@ -222,6 +222,18 @@ var ICONS = [
     links.forEach(function (l) {
       l.classList.toggle("active", l.dataset.target === id);
     });
+    // keep the current item visible inside the horizontally-scrolling
+    // mobile topbar (it has no other way to show where you are)
+    var activeInTopbar = topbar.querySelector(
+      '.hg-navlink[data-target="' + id + '"]',
+    );
+    if (activeInTopbar) {
+      activeInTopbar.scrollIntoView({
+        behavior: "smooth",
+        inline: "center",
+        block: "nearest",
+      });
+    }
   }
 
   var sectionEls = SECTIONS.map(function (s) {
