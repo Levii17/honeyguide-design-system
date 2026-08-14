@@ -140,6 +140,9 @@
   border-right: 1px solid #efe4cc;
   padding: 22px 16px 30px;
 }
+.hg-drawer-close {
+  display: none;
+}
 .hg-brand {
   display: flex;
   align-items: center;
@@ -218,7 +221,13 @@
   flex: 1;
   min-width: 0;
 }
-.hg-topbar {
+
+/* mobile top bar (hamburger + current section) and drawer backdrop -
+   hidden by default, only shown under the mobile breakpoint below */
+.hg-mobilebar {
+  display: none;
+}
+.hg-backdrop {
   display: none;
 }
 
@@ -1130,48 +1139,136 @@
   .hg-shell {
     display: block;
   }
+
+  /* sidebar becomes an off-canvas drawer, opened via the hamburger /
+     current-section button in .hg-mobilebar */
   .hg-sidebar {
-    display: none;
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100dvh;
+    width: min(84vw, 320px);
+    z-index: 40;
+    transform: translateX(-100%);
+    transition: transform 0.28s ease;
+    box-shadow: 12px 0 32px -14px rgba(27, 59, 46, 0.4);
+    padding-top: 56px;
   }
-  .hg-topbar {
+  .hg-sidebar.open {
+    transform: translateX(0);
+  }
+  .hg-sidebar .hg-navlink {
+    padding: 12px 10px;
+    font-size: 14px;
+  }
+  .hg-drawer-close {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 36px;
+    height: 36px;
+    border-radius: var(--r-sm);
+    color: var(--ink-soft);
+    background: var(--bg-2);
+    transition: background 0.15s ease;
+  }
+  .hg-drawer-close:hover {
+    background: #e6dcc0;
+  }
+  .hg-drawer-close svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .hg-backdrop {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(27, 20, 8, 0.42);
+    z-index: 35;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+  }
+  .hg-backdrop.show {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  /* top bar: hamburger + current-section indicator, both open the drawer */
+  .hg-mobilebar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
     position: sticky;
     top: 0;
     z-index: 20;
     background: var(--card-warm);
     border-bottom: 1px solid #efe4cc;
-    overflow-x: auto;
-    scroll-snap-type: x proximity;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    gap: 6px;
     padding: 10px 14px;
-    /* fade the edges so it reads as scrollable */
-    -webkit-mask-image: linear-gradient(
-      to right,
-      transparent 0,
-      #000 14px,
-      #000 calc(100% - 14px),
-      transparent 100%
-    );
-    mask-image: linear-gradient(
-      to right,
-      transparent 0,
-      #000 14px,
-      #000 calc(100% - 14px),
-      transparent 100%
-    );
   }
-  .hg-topbar::-webkit-scrollbar {
-    display: none;
-  }
-  .hg-topbar .hg-navlink {
+  .hg-menu-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     flex: none;
-    scroll-snap-align: center;
-    padding: 10px 13px;
-    min-height: 40px;
-    font-size: 12.5px;
+    width: 40px;
+    height: 40px;
+    border-radius: var(--r-sm);
+    color: var(--green-deep);
+    transition: background 0.15s ease;
   }
+  .hg-menu-btn:hover {
+    background: var(--bg-2);
+  }
+  .hg-menu-btn svg {
+    width: 20px;
+    height: 20px;
+  }
+  .hg-current-section {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex: 1;
+    min-width: 0;
+    height: 40px;
+    padding: 0 12px;
+    border-radius: var(--r-sm);
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 13.5px;
+    color: var(--green-deep);
+    background: var(--bg-2);
+    text-align: left;
+    transition: background 0.15s ease;
+  }
+  .hg-current-section:hover {
+    background: #e6dcc0;
+  }
+  .hg-current-section svg:first-child {
+    width: 16px;
+    height: 16px;
+    flex: none;
+    opacity: 0.85;
+  }
+  .hg-current-section span {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .hg-current-section .chev {
+    width: 14px;
+    height: 14px;
+    flex: none;
+    opacity: 0.6;
+  }
+
   .hg-content {
     padding: 28px 18px 90px;
   }
@@ -1189,12 +1286,17 @@
   }
   .hg-section {
     padding-top: 40px;
-    scroll-margin-top: 64px;
+    scroll-margin-top: 76px;
   }
   .hg-grid.cols-3,
   .hg-grid.cols-4 {
     grid-template-columns: 1fr 1fr;
   }
+}
+
+/* lock background scroll while the drawer is open */
+body.drawer-open {
+  overflow: hidden;
 }
 
 /* small phones: let text-heavy card grids stack to one column so

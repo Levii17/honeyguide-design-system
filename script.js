@@ -178,7 +178,13 @@ var ICONS = [
 
 (function () {
   var navlist = document.getElementById("navlist");
-  var topbar = document.getElementById("topbar");
+  var sidebar = document.getElementById("sidebar");
+  var backdrop = document.getElementById("backdrop");
+  var menuBtn = document.getElementById("menuBtn");
+  var drawerClose = document.getElementById("drawerClose");
+  var currentSectionBtn = document.getElementById("currentSectionBtn");
+  var currentSectionIcon = document.getElementById("currentSectionIcon");
+  var currentSectionLabel = document.getElementById("currentSectionLabel");
   var links = [];
   var lastGroup = null;
 
@@ -203,11 +209,40 @@ var ICONS = [
       s.label +
       "</span>";
     navlist.appendChild(a);
+    links.push(a);
+  });
 
-    var t = a.cloneNode(true);
-    topbar.appendChild(t);
-
-    links.push(a, t);
+  // ---- mobile drawer open/close ----
+  function openDrawer() {
+    sidebar.classList.add("open");
+    backdrop.classList.add("show");
+    document.body.classList.add("drawer-open");
+    menuBtn.setAttribute("aria-expanded", "true");
+    var activeLink = navlist.querySelector(".hg-navlink.active");
+    if (activeLink) {
+      activeLink.scrollIntoView({ block: "center" });
+    }
+  }
+  function closeDrawer() {
+    sidebar.classList.remove("open");
+    backdrop.classList.remove("show");
+    document.body.classList.remove("drawer-open");
+    menuBtn.setAttribute("aria-expanded", "false");
+  }
+  menuBtn.addEventListener("click", function () {
+    if (sidebar.classList.contains("open")) closeDrawer();
+    else openDrawer();
+  });
+  currentSectionBtn.addEventListener("click", openDrawer);
+  drawerClose.addEventListener("click", closeDrawer);
+  backdrop.addEventListener("click", closeDrawer);
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") closeDrawer();
+  });
+  // if the viewport grows past the mobile breakpoint while the drawer
+  // is open, don't leave it stuck open behind the (now static) sidebar
+  window.addEventListener("resize", function () {
+    if (window.innerWidth > 900) closeDrawer();
   });
 
   links.forEach(function (link) {
@@ -215,6 +250,7 @@ var ICONS = [
       e.preventDefault();
       var target = document.getElementById(link.dataset.target);
       if (target) target.scrollIntoView({ behavior: "smooth", block: "start" });
+      closeDrawer();
     });
   });
 
@@ -222,17 +258,12 @@ var ICONS = [
     links.forEach(function (l) {
       l.classList.toggle("active", l.dataset.target === id);
     });
-    // keep the current item visible inside the horizontally-scrolling
-    // mobile topbar (it has no other way to show where you are)
-    var activeInTopbar = topbar.querySelector(
-      '.hg-navlink[data-target="' + id + '"]',
-    );
-    if (activeInTopbar) {
-      activeInTopbar.scrollIntoView({
-        behavior: "smooth",
-        inline: "center",
-        block: "nearest",
-      });
+    var section = SECTIONS.filter(function (s) {
+      return s.id === id;
+    })[0];
+    if (section) {
+      currentSectionIcon.innerHTML = section.icon;
+      currentSectionLabel.textContent = section.num + ". " + section.label;
     }
   }
 
