@@ -299,6 +299,40 @@ var ICONS = [
     grid.appendChild(tile);
   });
 
+  // lazy-load character animation clips: nothing is requested over the
+  // network until a video scrolls near the viewport, at which point its
+  // real src is assigned. preload="none" (set in the markup) then means
+  // even the assigned clip won't download until the person hits play.
+  var lazyVideos = document.querySelectorAll("video.lazy-video");
+  if ("IntersectionObserver" in window) {
+    var videoIO = new IntersectionObserver(
+      function (entries, observer) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            var v = entry.target;
+            if (v.dataset.src) {
+              v.src = v.dataset.src;
+              v.removeAttribute("data-src");
+            }
+            observer.unobserve(v);
+          }
+        });
+      },
+      { rootMargin: "200px 0px" },
+    );
+    lazyVideos.forEach(function (v) {
+      videoIO.observe(v);
+    });
+  } else {
+    // no IntersectionObserver support: fall back to loading them upfront
+    lazyVideos.forEach(function (v) {
+      if (v.dataset.src) {
+        v.src = v.dataset.src;
+        v.removeAttribute("data-src");
+      }
+    });
+  }
+
   // motion replay buttons
   document.querySelectorAll("[data-replay]").forEach(function (btn) {
     btn.addEventListener("click", function () {
