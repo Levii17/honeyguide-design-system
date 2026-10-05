@@ -1,0 +1,24 @@
+/* HoneyGuide design tokens. Colours mirror src/content/tokens.ts (a test keeps them honest). */
+:root {
+  --bg: #f6efdd; --bg-2: #efe2c4; --card: #ffffff; --card-warm: #fff9ec;
+  --ink: #21543d; --ink-soft: #4c6659; --ink-faint: #7c9488; --line: #e9e0c6;
+  --green: #0fa676; --green-lt: #3fc79a; --green-dk: #0c8560; --green-deep: #21543d; --green-wash: #def5ec;
+  --gold: #ffc24d; --gold-lt: #ffd97d; --gold-dk: #e0a020; --gold-wash: #fff3dc;
+  --brown: #8b5e34; --brown-lt: #ad8058; --brown-dk: #6e4826; --brown-wash: #f1e6d8;
+  --flag-red: #df1f3d; --flag-blue: #1e3a8a; --flag-black: #111111;
+  --coral: #ff6b57; --coral-lt: #ff8c7c; --coral-dk: #e14a38; --coral-wash: #ffe3de;
+  --sky: #3fa9e0; --sky-lt: #6fc0ea; --sky-dk: #1f86bd; --sky-wash: #def1fb;
+  --violet: #8b6fd9; --violet-lt: #a88fe6; --violet-dk: #6b4fc0; --violet-wash: #ede7fb;
+  --r-sm: 12px; --r-md: 18px; --r-lg: 24px; --r-xl: 32px; --r-pill: 999px;
+  --shadow-tint: 33, 84, 61;
+  --clay: 7px 9px 18px rgba(var(--shadow-tint), .14), -5px -5px 12px rgba(255, 255, 255, .85),
+    inset 2px 2px 5px rgba(255, 255, 255, .9), inset -3px -4px 8px rgba(var(--shadow-tint), .06);
+  --clay-sm: 4px 5px 10px rgba(var(--shadow-tint), .13), -3px -3px 8px rgba(255, 255, 255, .85),
+    inset 1px 1px 3px rgba(255, 255, 255, .9), inset -2px -2px 5px rgba(var(--shadow-tint), .06);
+  --clay-in: inset 4px 4px 9px rgba(var(--shadow-tint), .14), inset -3px -3px 7px rgba(255, 255, 255, .9);
+  --font-display: 'Fredoka', ui-rounded, 'SF Pro Rounded', system-ui, sans-serif;
+  --font-body: 'Manrope', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+  --sidebar-w: 272px;
+  color-scheme: light;
+}
