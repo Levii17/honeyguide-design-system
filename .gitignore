@@ -3,4 +3,3 @@ dist
 coverage
 *.local
 .DS_Store
-package-lock.json
